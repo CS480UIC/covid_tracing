@@ -65,3 +65,23 @@ Relationship:
     Maxima : one - many
     Minima : one - zero
 
+
+  employee-given-schedule
+  
+  
+    Maxima : one - many
+    Minima : one - one
+    
+    
+  student-picks-schedule
+  
+  
+    Maxima : one - many
+    Minima : one - one
+    
+    
+  student-encouraged-vaccine_status
+  
+  
+    Maxima : one - many
+    Minima : one - one

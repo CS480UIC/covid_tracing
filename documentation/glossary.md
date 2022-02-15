@@ -112,3 +112,29 @@ Employee
     full_name M-1
     department_id 1-1
 
+
+Student
+
+
+    student_id 1-1
+    full_name M-1
+    department_id 1-1
+    
+    
+
+Vaccine_status
+
+
+    vaccine_name 1-1
+    date M-1
+    employee_id 1-1 
+    student_id 1-1
+    
+  
+Schedule
+
+
+    Course_name M-1
+    Time M-1
+    employee_id 1-1 
+    student_id 1-1

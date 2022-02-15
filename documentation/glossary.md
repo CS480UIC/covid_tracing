@@ -9,7 +9,7 @@ Entity:
   
   
     Synonyms: branch, compartment, section
-    Description: Department is a name for a part of the university. Employee are assigned in department and employee are        enrolled in depertment
+    Description: Department is a name for a part of the university. Employee are assigned in department and employee are enrolled in depertment
   Employee
   
   

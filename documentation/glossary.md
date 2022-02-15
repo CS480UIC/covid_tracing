@@ -53,6 +53,8 @@ Relationship:
 
 
   department-enrolled-student
+  
+  
     Maxima : one - many
     Minima : one - one
   

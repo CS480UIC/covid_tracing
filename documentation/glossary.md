@@ -33,4 +33,35 @@ Entity:
   
     Synonyms: agenda, routine
     Description: A student picks their desired schedule while the employee is assigned with a schedule.  
+    
+    
+Relationship:
+
+
+  university-has-department
+
+
+    Maxima : one - many
+    Minima : one - one
+
+
+  department-assigned-employee
+
+
+    Maxima : many - many
+    Minima  : one - one
+
+
+  department-enrolled-student
   
+  
+    Maxima : one - many
+   Minima : one - one
+  
+  
+  employee-required-vaccine_status
+  
+  
+    Maxima : one - many
+    Minima : one - zero
+

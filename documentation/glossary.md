@@ -53,10 +53,8 @@ Relationship:
 
 
   department-enrolled-student
-  
-  
     Maxima : one - many
-   Minima : one - one
+    Minima : one - one
   
   
   employee-required-vaccine_status

@@ -17,11 +17,20 @@ Entity:
     Description: Employee is a person who is assigned to a department. Employees are required to have vaccine_status and given a schedule.
 
   student
+   
   
+    Synonyms: classmate, scholar
+    Description: A student is any person who is enrolled in a department within a university. 
   
   vacccine_status
+     
   
+    Synonyms: immunization_status, dose_status
+    Description: A student or an employee can disclose their current vaccination status with the department. 
   
   schedule
+     
   
+    Synonyms: agenda, routine
+    Description: A student picks their desired schedule while the employee is assigned with a schedule.  
   

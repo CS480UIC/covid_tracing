@@ -85,3 +85,30 @@ Relationship:
   
     Maxima : one - many
     Minima : one - one
+    
+    
+    
+Attribute
+
+
+  University
+
+
+    id 1-1
+    name 1-1 
+
+
+  Department
+    
+    
+    id 1-1
+    name 1-1
+
+
+Employee
+
+
+    employee_id 1-1
+    full_name M-1
+    department_id 1-1
+

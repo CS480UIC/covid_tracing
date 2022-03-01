@@ -138,3 +138,22 @@ schedule
     time M-1
     employee_id 1-1 
     student_id 1-1
+    
+Dependent entities and dependency relationships:
+   
+   university is independent
+   department is depends on university
+   employee is depends on department
+   student is depends on department
+   vaccine_status is depends on employee
+   schedule depends on emplyee and student
+   
+   
+
+  
+
+
+
+
+
+

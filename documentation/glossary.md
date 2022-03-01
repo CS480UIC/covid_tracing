@@ -135,6 +135,7 @@ schedule
 
 
     course_name M-1 NOT NULL
+    course_id 1-M NOT NULL
     time M-1 NOT NULL
     employee_id 1-1 PRIMARY KEY, FOREIGN KEY
     student_id 1-1 PRIMARY KEY, FOREIGN KEY
@@ -152,8 +153,9 @@ Dependent entities and dependency relationships:
    
 
 Supertypes, subtypes, and partitions:
-
-
+    
+    university supertypehas department, employee, and student subtypes
+    employee and student particion department 
 
 
 Cascade and restrict actions for dependeny relationships
@@ -161,15 +163,26 @@ Cascade and restrict actions for dependeny relationships
 
 
 Cascade and restrict rules on foreign keys that implement dependency relationships
-
+    
+    
+    university unique, required
+    department simple, required
+    employee unique, required
+    student unique, required
+    vaccine_status simple
+    schedule required
 
 
 Implementing attribute types
-
+    
+    
+    
 
 
 Describe at least one plural attribute and describe how did you implement it
-
+    
+    schedule has a many course_name attribute which it can be implemented as multiple columns in the same table. 
+    course_id becomes three different columns. 
 
 
    

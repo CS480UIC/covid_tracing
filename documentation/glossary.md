@@ -158,11 +158,12 @@ Supertypes, subtypes, and partitions:
     employee and student particion department 
 
 
-Cascade and restrict actions for dependeny relationships
+Cascade and restrict actions for dependeny relationships:
 
+    scheudle contains the plural attribute. The primarykey of the new table is the composite of the plural attribute and the foreign key.
+    The new table that is to be created is dependend on the schedule table, so the primary key cascade and foriegn key restricts rules are specified.
 
-
-Cascade and restrict rules on foreign keys that implement dependency relationships
+Cascade and restrict rules on foreign keys that implement dependency relationships:
     
     
     university unique, required
@@ -173,22 +174,20 @@ Cascade and restrict rules on foreign keys that implement dependency relationshi
     schedule required
 
 
-Implementing attribute types
+Implementing attribute types:
     
+    
+    university 1(1) ---- has ---- department 1(1)
+    department 1(1) ----assigned --- employee 1(M)
+    department 1(1) ----choose ----student 1(M)
+    employee 1(M) -------required --- vaccine_status 1(1)
+    employee 1(M) -------given --- schedule M(1)
+    student 1(M) -------picks ------schedule M(1)
+    student 1(M) ------encouraged ---- vaccine_status 1(1)
     
     
 
-
-Describe at least one plural attribute and describe how did you implement it
+Describe at least one plural attribute and describe how did you implement it:
     
     schedule has a many course_name attribute which it can be implemented as multiple columns in the same table. 
     course_id becomes three different columns. 
-
-
-   
-
-
-
-
-
-

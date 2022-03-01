@@ -94,50 +94,50 @@ Attribute
   university
 
 
-    id 1-1
-    name 1-1 
+    id 1-1 PRIMARY KEY
+    name 1-1 NOT NULL
 
 
   department
     
     
-    id 1-1
-    name 1-1
+    id 1-1 PRIMARY KEY
+    name 1-1 NOT NULL
 
 
 employee
 
 
-    employee_id 1-1
-    full_name M-1
-    department_id 1-1
+    employee_id 1-1 PRIMARY KEY
+    full_name M-1 NOT NULL
+    department_id 1-1 FOREIGN KEY
 
 
 student
 
 
-    student_id 1-1
-    full_name M-1
-    department_id 1-1
+    student_id 1-1 PRIMARY KEY
+    full_name M-1 NOT NULL
+    department_id 1-1 FOREIGN KEY
     
     
 
 vaccine_status
 
 
-    vaccine_name 1-1
-    date M-1
-    employee_id 1-1 
-    student_id 1-1
+    vaccine_name 1-1 NOT NULL
+    date M-1 NOT NULL
+    employee_id 1-1 PRIMARY KEY, FOREIGN KEY
+    student_id 1-1 PRIMARY KEY, FOREIGN KEY
     
   
 schedule
 
 
-    course_name M-1
-    time M-1
-    employee_id 1-1 
-    student_id 1-1
+    course_name M-1 NOT NULL
+    time M-1 NOT NULL
+    employee_id 1-1 PRIMARY KEY, FOREIGN KEY
+    student_id 1-1 PRIMARY KEY, FOREIGN KEY
     
 Dependent entities and dependency relationships:
    
@@ -150,9 +150,29 @@ Dependent entities and dependency relationships:
     vaccine_status is depends on employee
     schedule depends on emplyee and student
    
-   
 
-  
+Supertypes, subtypes, and partitions:
+
+
+
+
+Cascade and restrict actions for dependeny relationships
+
+
+
+Cascade and restrict rules on foreign keys that implement dependency relationships
+
+
+
+Implementing attribute types
+
+
+
+Describe at least one plural attribute and describe how did you implement it
+
+
+
+   
 
 
 

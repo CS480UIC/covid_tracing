@@ -143,12 +143,12 @@ Dependent entities and dependency relationships:
    
    
    
-   university is independent
-   department is depends on university
-   employee is depends on department
-   student is depends on department
-   vaccine_status is depends on employee
-   schedule depends on emplyee and student
+    university is independent
+    department is depends on university
+    employee is depends on department
+    student is depends on department
+    vaccine_status is depends on employee
+    schedule depends on emplyee and student
    
    
 

@@ -91,21 +91,21 @@ Relationship:
 Attribute
 
 
-  University
+  university
 
 
     id 1-1
     name 1-1 
 
 
-  Department
+  department
     
     
     id 1-1
     name 1-1
 
 
-Employee
+employee
 
 
     employee_id 1-1
@@ -113,7 +113,7 @@ Employee
     department_id 1-1
 
 
-Student
+student
 
 
     student_id 1-1
@@ -122,7 +122,7 @@ Student
     
     
 
-Vaccine_status
+vaccine_status
 
 
     vaccine_name 1-1
@@ -131,10 +131,10 @@ Vaccine_status
     student_id 1-1
     
   
-Schedule
+schedule
 
 
-    Course_name M-1
-    Time M-1
+    course_name M-1
+    time M-1
     employee_id 1-1 
     student_id 1-1

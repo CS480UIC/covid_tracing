@@ -21,6 +21,9 @@ to their current software. And lastly, our project is different from others beca
 
 ## CRUD for university
 
+![image](https://user-images.githubusercontent.com/77253136/156668402-4290fc5b-e3b7-4d58-9947-597d3e42467f.png)
+
+
 ## CRUD for department
 
 ## CRUD for employee

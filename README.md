@@ -16,3 +16,11 @@ In this database, we will store the basic information of an employee and a stude
 what department they are in along with their name and ID number. Then each employee and student will also have a section for
 their vaccination status and their schedule. Since many schools already have their own application, this database will be added
 to their current software. And lastly, our project is different from others because it contains both individuals’ vaccine status and their schedules at once. 
+
+# Screenshots:
+
+# CRUD for university
+
+# CRUD for department
+
+# CRUD for employee

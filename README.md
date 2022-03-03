@@ -19,8 +19,8 @@ to their current software. And lastly, our project is different from others beca
 
 # Screenshots:
 
-# CRUD for university
+## CRUD for university
 
-# CRUD for department
+## CRUD for department
 
-# CRUD for employee
+## CRUD for employee

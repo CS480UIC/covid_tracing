@@ -31,7 +31,7 @@
   </head>
   
   <body>
-<h1 style="text-align: center;">Haeun Kim</h1> <!--changed title to my name -->
+<h1 style="text-align: center;">covid_tracing</h1> <!--changed title to my name -->
 <div style="font-size: 10pt;">
 	<c:choose>
 		<c:when test="${empty sessionScope.session_user }">

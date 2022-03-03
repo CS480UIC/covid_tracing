@@ -43,7 +43,13 @@
 			Hello：${sessionScope.session_user.username };
 			<a href="<c:url value='/jsps/user/queries.jsp'/>" target="body">Query Result</a> |&nbsp;&nbsp;
 			<a href="<c:url value='/UserServletLogout'/>" target="_parent">Logout</a> |&nbsp; 
-			<a href="<c:url value='/jsps/entity1/menu.jsp'/>" target="body">CRUD entity 1</a> |&nbsp;&nbsp;
+			<a href="<c:url value='/jsps/university/menu.jsp'/>" target="body">CRUD university</a> |&nbsp;&nbsp;
+			<a href="<c:url value='/jsps/university/menu.jsp'/>" target="body">CRUD department</a> |&nbsp;&nbsp;
+			<a href="<c:url value='/jsps/university/menu.jsp'/>" target="body">CRUD employee</a> |&nbsp;&nbsp;
+			<a href="<c:url value='/jsps/university/menu.jsp'/>" target="body">CRUD student</a> |&nbsp;&nbsp;
+			<a href="<c:url value='/jsps/university/menu.jsp'/>" target="body">CRUD vaccine_status</a> |&nbsp;&nbsp;
+			<a href="<c:url value='/jsps/university/menu.jsp'/>" target="body">CRUD schedule</a> |&nbsp;&nbsp;
+			
 
 		</c:otherwise>
 	</c:choose>

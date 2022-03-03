@@ -5,8 +5,9 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
+    <base href="">
     
-    <title>Update university</title>
+    <title>body</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,13 +22,12 @@
   </head>
   
   <body>
-  <h1>Update University</h1>
-<form action="<c:url value='/universityServletUpdate'/>" method="post">
-	<input type="hidden" name="method" value="search"/>
-	Update University Name   :<input type="text" name="username" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
-	<br/>
-	<input type="submit" value="Update university"/>
-</form>
+    <h1>CRUD operations for employee </h1>
+    <br>
+	<a href="<c:url value='/jsps/employee/employeecreate.jsp'/>" target="_parent">Create employee</a> |&nbsp; 
+	<a href="<c:url value='/jsps/employee/employeeread.jsp'/>" target="_parent">Read employee</a> |&nbsp;
+	<a href="<c:url value='/jsps/employee/employeeupdate.jsp'/>" target="_parent">Update employee</a> |&nbsp;	 
+	<a href="<c:url value='/jsps/employee/employeedelete.jsp'/>" target="_parent">Delete employee</a>	
+	    
   </body>
 </html>

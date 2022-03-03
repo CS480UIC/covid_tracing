@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Update university</title>
+    <title>Delete employee</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,13 +21,13 @@
   </head>
   
   <body>
-  <h1>Update University</h1>
-<form action="<c:url value='/universityServletUpdate'/>" method="post">
+  <h1>Delete university</h1>
+<form action="<c:url value='/employeeServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
-	Update University Name   :<input type="text" name="username" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+	Delete Employee Name :<input type="text" name="userid" value="${form.userid }"/>
+	<span style="color: red; font-weight: 900">${errors.userid }</span>
 	<br/>
-	<input type="submit" value="Update university"/>
+	<input type="submit" value="Delete employee"/>
 </form>
   </body>
 </html>

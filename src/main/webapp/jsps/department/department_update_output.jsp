@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Read university</title>
+    <title>Delete employee</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,20 +21,30 @@
   </head>
   
   <body>
-  <h1>Read university</h1>
+  <h1>Update employee</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/universityServletRead'/>" method="post">
-	<input type="hidden" name="method" value="regist"/>
-	University Name    :<input type="text" name="username" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+<form>
+	id    :<input type="text" name=userid value="${employee.userid }" disabled/>
 	<br/>
-<%-- 	Password：<input type="password" name="password" value="${form.password }"/>
+	
+	name ：<input type="text" name="username" value="${employee.username }" disabled />
+	<br/>
+	
+	department id ：<input type="text" name="userd_id" value="${employee.userd_id }" disabled />
+	<br/>
+
+</form>
+<h1>Update the values below</h1>
+<form action="<c:url value='/employeeServletUpdate'/>" method="post">
+		<input type="text" name="method" value="update"/>
+				<input type="hidden" name="userid" value="${employee.userid }"/>
+	Name：<input type="text" name="username" value="${employee.username }"/>
+	
 	<span style="color: red; font-weight: 900">${errors.password }</span>
 	<br/>
-	Email	：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
-	<br/> --%>
-	<input type="submit" value="Read university"/>
+
+	<input type="submit" value="Update employee"/>
 </form>
-  </body>
+
+</body>
 </html>

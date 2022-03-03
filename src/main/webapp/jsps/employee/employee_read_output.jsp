@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Update university</title>
+    <title>Read employee Output</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,13 +21,18 @@
   </head>
   
   <body>
-  <h1>Update University</h1>
-<form action="<c:url value='/universityServletUpdate'/>" method="post">
-	<input type="hidden" name="method" value="search"/>
-	Update University Name   :<input type="text" name="username" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+  <h1>Read employee Output</h1>
+<p style="color: red; font-weight: 900">${msg }</p>
+<form>
+	Employee Id     :<input type="text" name="userid" value="${employee.userid }" disabled/>
 	<br/>
-	<input type="submit" value="Update university"/>
+	Employee Full Name ：<input type="text" name="username" value="${employee.username }" disabled/>
+	<br/>
+	Employee Department Id ：<input type="text" name="userd_id" value="${employee.userd_id }" disabled/>
+	<br/>
+
 </form>
-  </body>
+
+<button onclick="window.location.href='<c:url value='/jsps/main.jsp'/>'">Continue</button>
+</body>
 </html>

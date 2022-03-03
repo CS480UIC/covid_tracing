@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Update university</title>
+    <title>employee Create</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,13 +21,18 @@
   </head>
   
   <body>
-  <h1>Update University</h1>
-<form action="<c:url value='/universityServletUpdate'/>" method="post">
-	<input type="hidden" name="method" value="search"/>
-	Update University Name   :<input type="text" name="username" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+  <h1>Create a new employee</h1>
+<form action="<c:url value='/employeeServletCreate'/>" method="post">
+	Employee Id    :<input type="text" name="userid" value="${form.userid }"/>
+	<span style="color: red; font-weight: 900">${errors.userid }</span>
 	<br/>
-	<input type="submit" value="Update university"/>
+	Employee Full Name ：<input type="text" name="username" value="${form.username }"/>
+	<span style="color: red; font-weight: 900">${errors.username }</span>
+	<br/>	
+	Employee Department Id ：<input type="text" name="e_d_id" value="${form.e_d_id }"/>
+	<span style="color: red; font-weight: 900">${errors.e_d_id }</span>
+	<br/>
+	<input type="submit" value="Create employee"/>
 </form>
   </body>
 </html>

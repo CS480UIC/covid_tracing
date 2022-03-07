@@ -46,7 +46,7 @@
 			<a href="<c:url value='/jsps/university/menu.jsp'/>" target="body">CRUD university</a> |&nbsp;&nbsp;
 			<a href="<c:url value='/jsps/department/menu.jsp'/>" target="body">CRUD department</a> |&nbsp;&nbsp;
 			<a href="<c:url value='/jsps/employee/menu.jsp'/>" target="body">CRUD employee</a> |&nbsp;&nbsp;
-			<a href="<c:url value='/jsps/entity1/menu.jsp'/>" target="body">CRUD student</a> |&nbsp;&nbsp;
+			<a href="<c:url value='/jsps/student/menu.jsp'/>" target="body">CRUD student</a> |&nbsp;&nbsp;
 			<a href="<c:url value='/jsps/entity1/menu.jsp'/>" target="body">CRUD vaccine_status</a> |&nbsp;&nbsp;
 			<a href="<c:url value='/jsps/entity1/menu.jsp'/>" target="body">CRUD schedule</a> |&nbsp;&nbsp;
 			

@@ -41,5 +41,26 @@ to their current software. And lastly, our project is different from others beca
 ![image](https://user-images.githubusercontent.com/77253136/156668994-71b2ab65-30ff-4d2d-a59c-132c720d3171.png)
 ![image](https://user-images.githubusercontent.com/77253136/156669015-fcb2d5e7-9671-47f8-b09d-bb3a11520535.png)
 
+## CRUD for student
+![image](https://user-images.githubusercontent.com/52987614/157165294-942d784c-1a3c-4dc9-8d9e-0564e4321415.png)
+![image](https://user-images.githubusercontent.com/52987614/157165399-1454e192-33e6-40ff-a5a4-c744b455e579.png)
+![image](https://user-images.githubusercontent.com/52987614/157165438-850c079d-a104-4bf5-ac7e-8b888ba91769.png)
+![image](https://user-images.githubusercontent.com/52987614/157165469-45e8a10b-72de-40d9-beda-24810cb19ae7.png)
+![image](https://user-images.githubusercontent.com/52987614/157165498-951f93cb-9ff0-4f22-9509-a17dec427726.png)
+
+## CRUD for vaccine_status
+![image](https://user-images.githubusercontent.com/52987614/157165594-4b98bd0c-1f1c-4d55-b9d0-0885e46f7974.png)
+![image](https://user-images.githubusercontent.com/52987614/157165629-476518f6-ced0-4e2e-b4bf-02509af53392.png)
+![image](https://user-images.githubusercontent.com/52987614/157165654-d5d08d91-861a-48ed-aef2-983dab553318.png)
+![image](https://user-images.githubusercontent.com/52987614/157165681-df71c302-29d1-498b-976d-46e5ff67fefb.png)
+![image](https://user-images.githubusercontent.com/52987614/157165709-34e37710-fb5a-4114-854a-13338fd6656b.png)
+
+## CRUD for schedule
+![image](https://user-images.githubusercontent.com/52987614/157165848-52288af3-202a-44b8-9572-d365cd963f55.png)
+![image](https://user-images.githubusercontent.com/52987614/157165895-d5c4aee3-7c2c-4d5a-83c1-efd7f3e71af6.png)
+![image](https://user-images.githubusercontent.com/52987614/157165930-9fb28c97-6f61-40e9-b29c-3a2c32ffa7ca.png)
+![image](https://user-images.githubusercontent.com/52987614/157165961-b5a24c24-6d82-4348-8d81-a2716abaf13f.png)
+![image](https://user-images.githubusercontent.com/52987614/157165981-a32fa741-6a79-4e73-92ec-ec2b4251c77b.png)
+
 
 

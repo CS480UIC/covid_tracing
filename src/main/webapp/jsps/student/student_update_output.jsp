@@ -24,18 +24,18 @@
   <h1>Update student</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	Student Id    :<input type="text" name="username1" value="${entity1.userid }" disabled/>
+	Student Id    :<input type="text" name="username1" value="${student.userid }" disabled/>
 	<br/>
 	
-	Student Full Name：<input type="text" name="password1" value="${entity1.username }" disabled />
+	Student Full Name：<input type="text" name="password1" value="${student.username }" disabled />
 	<br/>
-	Student Department Id	：<input type="text" name="email1" value="${entity1.userd_id }" disabled/>
+	Student Department Id	：<input type="text" name="email1" value="${student.userd_id }" disabled/>
 	<br/>
 </form>
 <h1>Update the values below</h1>
 <form action="<c:url value='/studentServletUpdate'/>" method="post">
 		<input type="hidden" name="method" value="update"/>
-				<input type="hidden" name="userid" value="${entity1.userid }"/>
+				<input type="hidden" name="userid" value="${student.userid }"/>
 	Student Full Name：<input type="text" name="username" value="${form.username }"/>
 	<span style="color: red; font-weight: 900">${errors.username }</span>
 	<br/>

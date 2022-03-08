@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Delete student</title>
+    <title>Delete schedule</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,20 +21,16 @@
   </head>
   
   <body>
-  <h1>Delete student</h1>
-<p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/Entity1ServletDelete'/>" method="post">
-	<input type="hidden" name="method" value="delete"/>
-		<input type="hidden" name="username" value="${student.userid }"/>
-	Student Id    :<input type="text" name="username" value="${student.userid }" disabled/>
+  <h1>Delete schedule</h1>
+<form action="<c:url value='/scheduleServletDelete'/>" method="post">
+	<input type="hidden" name="method" value="search"/>
+	Delete Course Name   :<input type="text" name="coursename" value="${form.coursename }"/>
+	<span style="color: red; font-weight: 900">${errors.coursename }</span>
 	<br/>
-	
-	Student Full Name：<input type="text" name="password" value="${student.username }" disabled/>
+	Delete Time   :<input type="text" name="time" value="${form.time }"/>
+	<span style="color: red; font-weight: 900">${errors.time }</span>
 	<br/>
-	Student Department Id	：<input type="text" name="email" value="${student.userd_id }" disabled/>
-	<br/>
-	<input type="submit" value="Delete student"/>
+	<input type="submit" value="Delete schedule"/>
 </form>
-
-</body>
+  </body>
 </html>

@@ -5,8 +5,9 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
+    <base href="">
     
-    <title>Update student</title>
+    <title>body</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,16 +22,12 @@
   </head>
   
   <body>
-  <h1>Update Student</h1>
-<form action="<c:url value='/studentServletUpdate'/>" method="post">
-	<input type="hidden" name="method" value="search"/>
-	Update Student Name   :<input type="text" name="username" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
-	<br/>
-	Student Id   :<input type="text" name="userid" value="${form.userid }"/>
-	<span style="color: red; font-weight: 900">${errors.userid }</span>
-	<br/>
-	<input type="submit" value="Update student"/>
-</form>
+    <h1>CRUD operations for vaccine_status </h1>
+    <br>
+	<a href="<c:url value='/jsps/vaccine_status/vaccine_statuscreate.jsp'/>" target="_parent">Create vaccine_status</a> |&nbsp; 
+	<a href="<c:url value='/jsps/vaccine_status/vaccine_statusread.jsp'/>" target="_parent">Read vaccine_status</a> |&nbsp;
+	<a href="<c:url value='/jsps/vaccine_status/vaccine_statusupdate.jsp'/>" target="_parent">Update vaccine_status</a> |&nbsp;	 
+	<a href="<c:url value='/jsps/vaccine_status/vaccine_statusdelete.jsp'/>" target="_parent">Delete vaccine_status</a>	
+	    
   </body>
 </html>

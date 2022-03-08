@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Read student</title>
+    <title>Read vaccine_status</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,20 +21,24 @@
   </head>
   
   <body>
-  <h1>Read student</h1>
+  <h1>Read vaccine_status</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/studentServletRead'/>" method="post">
+<form action="<c:url value='/vaccine_statusServletRead'/>" method="post">
 	<input type="hidden" name="method" value="regist"/>
+	
+	Employee Id    :<input type="text" name="userid" value="${form.userid }"/>
+	<span style="color: red; font-weight: 900">${errors.userid }</span>
+	<br/>
 	Student Id    :<input type="text" name="userid" value="${form.userid }"/>
 	<span style="color: red; font-weight: 900">${errors.userid }</span>
 	<br/>
-<%-- 	Student Full Name：<input type="text" name="username" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+<%-- 	Vaccine Name：<input type="text" name="vaccinename" value="${form.vaccinename }"/>
+	<span style="color: red; font-weight: 900">${errors.vaccinename }</span>
 	<br/>
-	Student Department Id	：<input type="text" name="userd_id" value="${form.userd_id }"/>
-	<span style="color: red; font-weight: 900">${errors.userd_id }</span>
+	Date	：<input type="text" name="date" value="${form.date }"/>
+	<span style="color: red; font-weight: 900">${errors.date }</span>
 	<br/> --%>
-	<input type="submit" value="Read student"/>
+	<input type="submit" value="Read vaccine_status"/>
 </form>
   </body>
 </html>

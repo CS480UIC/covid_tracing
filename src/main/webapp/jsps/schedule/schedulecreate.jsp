@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Update student</title>
+    <title>schedule Create</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,16 +21,21 @@
   </head>
   
   <body>
-  <h1>Update Student</h1>
-<form action="<c:url value='/studentServletUpdate'/>" method="post">
-	<input type="hidden" name="method" value="search"/>
-	Update Student Name   :<input type="text" name="username" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+  <h1>schedule Create</h1>
+<form action="<c:url value='/scheduleServletCreate'/>" method="post">
+	Course Name    :<input type="text" name="coursename" value="${form.coursename }"/>
+	<span style="color: red; font-weight: 900">${errors.coursename }</span>
 	<br/>
-	Student Id   :<input type="text" name="userid" value="${form.userid }"/>
+	Time：<input type="text" name="time" value="${form.time }"/>
+	<span style="color: red; font-weight: 900">${errors.time }</span>
+	<br/>
+	Employee Id	：<input type="text" name="userid" value="${form.userid }"/>
 	<span style="color: red; font-weight: 900">${errors.userid }</span>
 	<br/>
-	<input type="submit" value="Update student"/>
+	Student Id	：<input type="text" name="userid" value="${form.userid }"/>
+	<span style="color: red; font-weight: 900">${errors.userid }</span>
+	<br/>
+	<input type="submit" value="Create schedule"/>
 </form>
   </body>
 </html>

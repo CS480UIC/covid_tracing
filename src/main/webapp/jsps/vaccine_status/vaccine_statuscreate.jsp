@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Update student</title>
+    <title>vaccine_status Create</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,16 +21,21 @@
   </head>
   
   <body>
-  <h1>Update Student</h1>
-<form action="<c:url value='/studentServletUpdate'/>" method="post">
-	<input type="hidden" name="method" value="search"/>
-	Update Student Name   :<input type="text" name="username" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+  <h1>vaccine_status Create</h1>
+<form action="<c:url value='/vaccine_statusServletCreate'/>" method="post">
+	Vaccine Name    :<input type="text" name="vaccinename" value="${form.vaccinename }"/>
+	<span style="color: red; font-weight: 900">${errors.vaccinename }</span>
 	<br/>
-	Student Id   :<input type="text" name="userid" value="${form.userid }"/>
+	Date：<input type="text" name="date" value="${form.date }"/>
+	<span style="color: red; font-weight: 900">${errors.date }</span>
+	<br/>
+	Employee Id	：<input type="text" name="userid" value="${form.userid }"/>
 	<span style="color: red; font-weight: 900">${errors.userid }</span>
 	<br/>
-	<input type="submit" value="Update student"/>
+	Student Id	：<input type="text" name="userid" value="${form.userid }"/>
+	<span style="color: red; font-weight: 900">${errors.userid }</span>
+	<br/>
+	<input type="submit" value="Create vaccine_status"/>
 </form>
   </body>
 </html>

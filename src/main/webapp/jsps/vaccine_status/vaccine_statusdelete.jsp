@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Delete student</title>
+    <title>Delete vaccine_status</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,20 +21,16 @@
   </head>
   
   <body>
-  <h1>Delete student</h1>
-<p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/Entity1ServletDelete'/>" method="post">
-	<input type="hidden" name="method" value="delete"/>
-		<input type="hidden" name="username" value="${student.userid }"/>
-	Student Id    :<input type="text" name="username" value="${student.userid }" disabled/>
+  <h1>Delete vaccine_status</h1>
+<form action="<c:url value='/vaccine_statusServletDelete'/>" method="post">
+	<input type="hidden" name="method" value="search"/>
+	Delete Vaccine Name   :<input type="text" name="vaccinename" value="${form.vaccinename }"/>
+	<span style="color: red; font-weight: 900">${errors.vaccinename }</span>
 	<br/>
-	
-	Student Full Name：<input type="text" name="password" value="${student.username }" disabled/>
+	Delete Vaccine Date   :<input type="text" name="date" value="${form.date }"/>
+	<span style="color: red; font-weight: 900">${errors.date }</span>
 	<br/>
-	Student Department Id	：<input type="text" name="email" value="${student.userd_id }" disabled/>
-	<br/>
-	<input type="submit" value="Delete student"/>
+	<input type="submit" value="Delete vaccine_status"/>
 </form>
-
-</body>
+  </body>
 </html>

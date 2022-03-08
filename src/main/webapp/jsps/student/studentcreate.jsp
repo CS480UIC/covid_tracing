@@ -26,11 +26,11 @@
 	Student Id    :<input type="text" name="userid" value="${form.userid }"/>
 	<span style="color: red; font-weight: 900">${errors.username }</span>
 	<br/>
-	Student Full Name：<input type="password" name="username" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.password }</span>
+	Student Full Name：<input type="text" name="username" value="${form.username }"/>
+	<span style="color: red; font-weight: 900">${errors.username }</span>
 	<br/>
 	Student Department Id	：<input type="text" name="userd_id" value="${form.userd_id }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	<span style="color: red; font-weight: 900">${errors.userd_id }</span>
 	<br/>
 	<input type="submit" value="Create student"/>
 </form>

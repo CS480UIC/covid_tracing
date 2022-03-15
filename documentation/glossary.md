@@ -96,6 +96,7 @@ Attribute
 
     id 1-1 PRIMARY KEY
     name 1-1 NOT NULL
+    city 1-1 NOT NULL
 
 
   department
@@ -103,6 +104,7 @@ Attribute
     
     id 1-1 PRIMARY KEY
     name 1-1 NOT NULL
+    building_name 1-1 NOT NULL
 
 
 employee

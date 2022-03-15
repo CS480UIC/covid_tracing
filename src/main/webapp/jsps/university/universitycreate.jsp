@@ -28,7 +28,9 @@
 	<br/>
 	University Name ：<input type="text" name="username" value="${form.password }"/>
 	<span style="color: red; font-weight: 900">${errors.password }</span>
-
+	<br/>
+	University City ：<input type="text" name="usercity" value="${form.password }"/>
+	<span style="color: red; font-weight: 900">${errors.password }</span>
 
 	<br/>
 	<input type="submit" value="Create university"/>

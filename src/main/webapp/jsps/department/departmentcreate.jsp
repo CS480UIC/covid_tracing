@@ -28,9 +28,11 @@
 	<br/>
 	Department Name ：<input type="text" name="username" value="${form.password }"/>
 	<span style="color: red; font-weight: 900">${errors.password }</span>
-
-
 	<br/>
+	Department Building_Name ：<input type="text" name="userbuildingname" value="${form.password }"/>
+	<span style="color: red; font-weight: 900">${errors.password }</span>
+	<br/>	
+	
 	<input type="submit" value="Create department"/>
 </form>
   </body>

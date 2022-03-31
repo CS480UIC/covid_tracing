@@ -23,8 +23,7 @@ from university
 where university_id = 5;
 
 -- From the N queries, at least one should use a date and time function.
--- we don't have date nor time attributes, instead we will add one more aggregate function
-select MAX(employee_id) number_of_employee
+select date(employee_start_date)
 from employee;
 
 -- From the N queries, at least one should group rows with identical values into a set of 

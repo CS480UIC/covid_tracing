@@ -24,7 +24,7 @@
   <h1>Initialize DB</h1>
 
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/UserServletRegister'/>" method="post">
+<form action="<c:url value='/InitializeDB'/>" method="post">
 
 	<input type="submit" value="Initialize DB"/>
 </form>

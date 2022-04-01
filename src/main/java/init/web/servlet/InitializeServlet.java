@@ -11,6 +11,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import init.service.InitException;
+import init.service.InitService;
 import user.domain.User;
 import user.service.UserException;
 import user.service.UserService;
@@ -40,20 +42,19 @@ public class InitializeServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("Called the Servlet.");
 	
-		
-		/*
+		InitService initService = new InitService();
+	
 		try {
-			userservice.regist(form);
-			response.sendRedirect( request.getContextPath() + "/jsps/user/login.jsp");
-		} catch (ClassNotFoundException | UserException e) {
+			initService.initializeDB();
+			response.sendRedirect( request.getContextPath() + "/jsps/entity1/entity1create.jsp");
+		} catch (ClassNotFoundException | InitException e) {
 			e.printStackTrace();
 		} catch (InstantiationException e) {
 			e.printStackTrace();
 		} catch (IllegalAccessException e) {
 			e.printStackTrace();
-		}  */
+		}  
 		
 	}
 

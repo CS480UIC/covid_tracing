@@ -107,6 +107,17 @@
     <url-pattern>/UniversityServletRead</url-pattern>
   </servlet-mapping>
    
+  <servlet>
+    <description></description>
+    <display-name>UniversityServletDelete</display-name>
+    <servlet-name>UniversityServletDelete</servlet-name>
+    <servlet-class>university.web.servlet.UniversityServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UniversityServletDelete</servlet-name>
+    <url-pattern>/UniversityServletDelete</url-pattern>
+  </servlet-mapping>
+      
   
   
   <servlet>

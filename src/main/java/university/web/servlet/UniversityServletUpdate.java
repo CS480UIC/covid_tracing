@@ -18,13 +18,13 @@ import department.domain.Department;
  * Servlet implementation class UserServlet
  */
 
-public class DepartmentServletUpdate extends HttpServlet {
+public class UniversityServletUpdate extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
-	public DepartmentServletUpdate() {
+	public UniversityServletUpdate() {
 		super();
 	}
 

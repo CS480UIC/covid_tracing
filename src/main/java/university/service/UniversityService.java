@@ -21,7 +21,7 @@ public class UniversityService {
 	 */
 	public void create(University form) throws UniversityException, ClassNotFoundException, InstantiationException, IllegalAccessException{
 		// check the primary key of Entity1
-		University entity1 = universityDao.findByDepartmentID(form.getUniversity_id());
+		University entity1 = universityDao.findByUniversityID(form.getUniversity_id());
 		if(entity1.getUniversity_id() != null && entity1.getUniversity_id().equals(form.getUniversity_id())) throw new UniversityException("This university id has been registered before!");
 		universityDao.add(form);
 	}

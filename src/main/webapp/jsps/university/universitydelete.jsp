@@ -22,10 +22,10 @@
   
   <body>
   <h1>Delete university</h1>
-<form action="<c:url value='/universityServletDelete'/>" method="post">
+<form action="<c:url value='/UniversityServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
-	Delete Uiversity Name :<input type="text" name="userid" value="${form.userid }"/>
-	<span style="color: red; font-weight: 900">${errors.userid }</span>
+	Delete University ID:<input type="text" name="university_user_id" value="${form.university_user_id }"/>
+	<span style="color: red; font-weight: 900">${errors.university_user_id }</span>
 	<br/>
 	<input type="submit" value="Delete university"/>
 </form>

@@ -41,7 +41,7 @@ public class UniversityServletRead extends HttpServlet {
 		UniversityDao universityDao = new UniversityDao();
 		
 		try {
-			university = universityDao.findByDepartmentID(Integer.parseInt(request.getParameter("university_id")));
+			university = universityDao.findByUniversityID(Integer.parseInt(request.getParameter("university_id")));
 		} catch (ClassNotFoundException e1) {
 			e1.printStackTrace();
 		} catch (InstantiationException e1) {

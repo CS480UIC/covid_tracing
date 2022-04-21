@@ -30,7 +30,7 @@ public class UniversityDao {
 	 */
 	private String MySQL_password = "annandliz"; //TODO change password
 
-	public University findByDepartmentID(Integer university_id_p) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+	public University findByUniversityID(Integer university_id_p) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		University university = new University();
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
@@ -107,27 +107,27 @@ public class UniversityDao {
 //	}
 //	
 //	
-//	/**
-//	 * @param username
-//	 * @throws ClassNotFoundException
-//	 * @throws InstantiationException
-//	 * @throws IllegalAccessException
-//	 */
-//	public void delete(String username) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
-//		try {
-//			Class.forName("com.mysql.cj.jdbc.Driver");
-//			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/bookstore", MySQL_user, MySQL_password);
-//			
-//			String sql = "delete from entity1 where username = ?";
-//			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-//		    preparestatement.setString(1,username);
-//		    preparestatement.executeUpdate();
-//		    connect.close();
-//		} catch(SQLException e) {
-//			throw new RuntimeException(e);
-//		}
-//	}
-//	
+	/**
+	 * @param username
+	 * @throws ClassNotFoundException
+	 * @throws InstantiationException
+	 * @throws IllegalAccessException
+	 */
+	public void delete(String university_id) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/bookstore", MySQL_user, MySQL_password);
+			
+			String sql = "set foreign_key_checks=0; delete from university where university_id = ?";
+			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+		    preparestatement.setInt(1, Integer.parseInt(university_id));
+		    preparestatement.executeUpdate();
+		    connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+	}
+	
 	
 	
 }

@@ -24,13 +24,20 @@
   <h1>Read Department Output</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	Id    :<input type="text" name="userid" value="${department.userid }" disabled/>
+
+	
+
+	Department Id    :<input type="text" name="department_id" value="${department.department_id }"disabled/>
 	<br/>
-	Name：<input type="text" name="username" value="${department.username }" disabled/>
+	Department Name ：<input type="text" name="department_name" value="${department.department_name }"disabled/>
 	<br/>
+	Department Number ：<input type="text" name="department_number" value="${department.department_number }"disabled/>
+	<br/>	
+	University ID ：<input type="text" name="university_id" value="${department.university_id }"disabled/>
+	<br/>	
 
 </form>
 
-<button onclick="window.location.href='<c:url value='/jsps/main.jsp'/>'">Continue</button>
+<button onclick="window.location.href='<c:url value='/jsps/department/departmentread.jsp'/>'">Continue</button>
 </body>
 </html>

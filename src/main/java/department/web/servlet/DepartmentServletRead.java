@@ -37,28 +37,28 @@ public class DepartmentServletRead extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//		Department entity1 = null;
-//		DepartmentDao entity1Dao = new DepartmentDao();
-//		
-//		try {
-//			entity1 = entity1Dao.findByDepartmentID(request.getParameter("username"));
-//		} catch (ClassNotFoundException e1) {
-//			e1.printStackTrace();
-//		} catch (InstantiationException e1) {
-//			e1.printStackTrace();
-//		} catch (IllegalAccessException e1) {
-//			e1.printStackTrace();
-//		}
-//		
-//		if(entity1.getUsername()!=null){
-//					System.out.println(entity1);
-//					request.setAttribute("entity1", entity1);
-//					request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
-//			}
-//			else{
-//			request.setAttribute("msg", "Entity not found");
-//			request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
-//		}
+		Department department = null;
+		DepartmentDao departmentDao = new DepartmentDao();
+		
+		try {
+			department = departmentDao.findByDepartmentID(Integer.parseInt(request.getParameter("department_id")));
+		} catch (ClassNotFoundException e1) {
+			e1.printStackTrace();
+		} catch (InstantiationException e1) {
+			e1.printStackTrace();
+		} catch (IllegalAccessException e1) {
+			e1.printStackTrace();
+		}
+		
+		if(department.getDepartment_id()!=null){
+					System.out.println(department);
+					request.setAttribute("department", department);
+					request.getRequestDispatcher("/jsps/department/department_read_output.jsp").forward(request, response);
+			}
+			else{
+			request.setAttribute("msg", "Entity not found");
+			request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+		}
 	}
 }
 

@@ -120,6 +120,17 @@
     <url-pattern>/DepartmentServletCreate</url-pattern>
   </servlet-mapping>
   
+  <servlet>
+    <description></description>
+    <display-name>DepartmentServletRead</display-name>
+    <servlet-name>DepartmentServletRead</servlet-name>
+    <servlet-class>department.web.servlet.DepartmentServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DepartmentServletRead</servlet-name>
+    <url-pattern>/DepartmentServletRead</url-pattern>
+  </servlet-mapping>  
+  
   
   
   

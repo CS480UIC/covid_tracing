@@ -28,12 +28,7 @@
 	University ID    :<input type="text" name="university_id" value="${form.university_id }"/>
 	<span style="color: red; font-weight: 900">${errors.university_id }</span>
 	<br/>
-<%-- 	Password：<input type="password" name="password" value="${form.password }"/>
-	<span style="color: red; font-weight: 900">${errors.password }</span>
-	<br/>
-	Email	：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
-	<br/> --%>
+
 	<input type="submit" value="Read university"/>
 </form>
   </body>

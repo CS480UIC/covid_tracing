@@ -164,7 +164,19 @@
   <servlet-mapping>
     <servlet-name>DepartmentServletDelete</servlet-name>
     <url-pattern>/DepartmentServletDelete</url-pattern>
-  </servlet-mapping>    
+  </servlet-mapping>   
+  
+  <servlet>
+    <description></description>
+    <display-name>DepartmentServletUpdate</display-name>
+    			  
+    <servlet-name>DepartmentServletUpdate</servlet-name>
+    <servlet-class>department.web.servlet.DepartmentServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DepartmentServletUpdate</servlet-name>
+    <url-pattern>/DepartmentServletUpdate</url-pattern>
+  </servlet-mapping>      
   
   
   

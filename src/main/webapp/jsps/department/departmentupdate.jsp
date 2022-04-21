@@ -21,13 +21,15 @@
   </head>
   
   <body>
-  <h1>Update University</h1>
-<form action="<c:url value='/departmentServletUpdate'/>" method="post">
+  <h1>Update Department</h1>
+<form action="<c:url value='/DepartmentServletUpdate'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
-	Update Department Name   :<input type="text" name="username" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+	
+	Update Department ID   :<input type="text" name="department_id" value="${form.department_id }"/>
+	<span style="color: red; font-weight: 900">${errors.department_id }</span>
+	
 	<br/>
-	<input type="submit" value="Update department"/>
+	<input type="submit" value="Update Department"/>
 </form>
   </body>
 </html>

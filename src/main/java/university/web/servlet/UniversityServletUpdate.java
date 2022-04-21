@@ -75,10 +75,6 @@ public class UniversityServletUpdate extends HttpServlet {
 				String[] values = paramMap.get(name);
 				info.add(values[0]);
 			}
-//			form.setUniversity_id(info.get(2));
-//			form.setEmail(info.get(3));
-//			form.setUsername(request.getParameter("username"));
-			
 			
 			form.setUniversity_id(Integer.parseInt(request.getParameter("university_id")));
 			form.setUniversity_name(request.getParameter("university_name"));

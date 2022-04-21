@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Delete employee</title>
+    <title>Update Department</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,29 +21,34 @@
   </head>
   
   <body>
-  <h1>Update employee</h1>
+  <h1>Update Department</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	id    :<input type="text" name=userid value="${employee.userid }" disabled/>
+
+	Department Id    :<input type="text" name="department_id" value="${department.department_id }"disabled/>
 	<br/>
-	
-	name ：<input type="text" name="username" value="${employee.username }" disabled />
+	Department Name ：<input type="text" name="department_name" value="${department.department_name }"disabled/>
 	<br/>
-	
-	department id ：<input type="text" name="userd_id" value="${employee.userd_id }" disabled />
+	Department Number ：<input type="text" name="department_number" value="${department.department_number }"disabled/>
+	<br/>	
+	University ID ：<input type="text" name="university_id" value="${department.university_id }"disabled/>
 	<br/>
 
 </form>
 <h1>Update the values below</h1>
-<form action="<c:url value='/employeeServletUpdate'/>" method="post">
-		<input type="text" name="method" value="update"/>
-				<input type="hidden" name="userid" value="${employee.userid }"/>
-	Name：<input type="text" name="username" value="${employee.username }"/>
+<form action="<c:url value='/DepartmentServletUpdate'/>" method="post">
+	<input type="hidden" name="method" value="update"/>
+	<input type="hidden" name="department_id" value="${department.department_id }"/>
 	
-	<span style="color: red; font-weight: 900">${errors.password }</span>
+	Department Name ：<input type="text" name="department_name" value="${form.department_name }"/>
 	<br/>
+	Department Number ：<input type="text" name="department_number" value="${form.department_number }"/>
+	<br/>	
+	University ID ：<input type="text" name="university_id" value="${form.university_id }"/>
+	<br/>
+	
 
-	<input type="submit" value="Update employee"/>
+	<input type="submit" value="Update Department"/>
 </form>
 
 </body>

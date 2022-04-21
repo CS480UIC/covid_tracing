@@ -29,7 +29,7 @@
 	<span style="color: red; font-weight: 900">${errors.university_id }</span>
 	
 	<br/>
-	<input type="submit" value="Update university"/>
+	<input type="submit" value="Update University"/>
 </form>
   </body>
 </html>

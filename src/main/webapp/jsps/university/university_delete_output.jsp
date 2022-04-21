@@ -37,8 +37,8 @@
 	
 	
 	
-	<input type="submit" value="Delete University"/>
 </form>
+<button onclick="window.location.href='<c:url value='/jsps/university/universitydelete.jsp'/>'">Continue</button>
 
 </body>
 </html>

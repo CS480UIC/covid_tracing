@@ -57,7 +57,7 @@ public class UniversityServletDelete extends HttpServlet {
 				}
 				else{
 				request.setAttribute("msg", "University not found");
-				request.getRequestDispatcher("/jsps/university/university_read_output.jsp").forward(request, response);
+				request.getRequestDispatcher("/jsps/university/university_delete_output.jsp").forward(request, response);
 			}
 		}
 		else if(method.equals("delete"))

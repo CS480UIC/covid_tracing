@@ -141,7 +141,17 @@
     <servlet-name>DepartmentServletRead</servlet-name>
     <url-pattern>/DepartmentServletRead</url-pattern>
   </servlet-mapping>  
-  
+
+  <servlet>
+    <description></description>
+    <display-name>DepartmentServletDelete</display-name>
+    <servlet-name>DepartmentServletDelete</servlet-name>
+    <servlet-class>department.web.servlet.DepartmentServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DepartmentServletDelete</servlet-name>
+    <url-pattern>/DepartmentServletDelete</url-pattern>
+  </servlet-mapping>    
   
   
   

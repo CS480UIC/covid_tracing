@@ -119,16 +119,34 @@ public class DepartmentDao {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/bookstore", MySQL_user, MySQL_password);
-			
+//			
+//			String sql = "delete from department where department_id = ?";
+//			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+//		    preparestatement.setInt(1, Integer.parseInt(department_id_p));
+//		    preparestatement.executeUpdate();
+//		    connect.close();
+		    
+		    
+			String sql0 = "set foreign_key_checks=0";	
 			String sql = "delete from department where department_id = ?";
+			PreparedStatement preparestatement0 = connect.prepareStatement(sql0); 
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+		    preparestatement0.executeUpdate();
 		    preparestatement.setInt(1, Integer.parseInt(department_id_p));
 		    preparestatement.executeUpdate();
 		    connect.close();
+		    
+		    
+		    
 		} catch(SQLException e) {
 			throw new RuntimeException(e);
 		}
 	}
+	
+	
+	
+	
+
 	
 	
 	

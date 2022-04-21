@@ -89,24 +89,25 @@ public class UniversityDao {
 	 * @throws IllegalAccessException
 	 */
 	
-//	public void update(Entity1 form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
-//		try {
-//			Class.forName("com.mysql.cj.jdbc.Driver");
-//			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/bookstore", MySQL_user, MySQL_password);
-//			
-//			String sql = "UPDATE entity1 SET password = ?, email = ? where username = ?;";
-//			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-//		    preparestatement.setString(1,form.getPassword());
-//			preparestatement.setString(2,form.getEmail());
-//		    preparestatement.setString(3,form.getUsername());
-//		    preparestatement.executeUpdate();
-//		    connect.close();
-//		} catch(SQLException e) {
-//			throw new RuntimeException(e);
-//		}
-//	}
-//	
-//	
+	public void update(University form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/bookstore", MySQL_user, MySQL_password);
+			
+			String sql = "UPDATE university SET university_name = ?, university_user_id = ? where university_id = ?";
+			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+			preparestatement.setString(1,form.getUniversity_name());
+		    preparestatement.setString(2,form.getUniversity_user_id());
+		    preparestatement.setInt(3,form.getUniversity_id());
+
+		    preparestatement.executeUpdate();
+		    connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+	}
+	
+	
 	/**
 	 * @param username
 	 * @throws ClassNotFoundException

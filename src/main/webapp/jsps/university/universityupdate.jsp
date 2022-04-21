@@ -22,10 +22,12 @@
   
   <body>
   <h1>Update University</h1>
-<form action="<c:url value='/universityServletUpdate'/>" method="post">
+<form action="<c:url value='/UniversityServletUpdate'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
-	Update University Name   :<input type="text" name="username" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+	
+	Update University Id   :<input type="text" name="university_id" value="${form.university_id }"/>
+	<span style="color: red; font-weight: 900">${errors.university_id }</span>
+	
 	<br/>
 	<input type="submit" value="Update university"/>
 </form>

@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Delete university</title>
+    <title>Update university</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,26 +21,32 @@
   </head>
   
   <body>
-  <h1>Update university</h1>
+  <h1>Update University</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	id    :<input type="text" name=userid value="${university.userid }" disabled/>
+
+	University Id    :<input type="text" name="university_id" value="${university.university_id }"disabled/>
+	<br/>
+		University Name ：<input type="text" name="university_name" value="${university.university_name }"disabled/>
+	<br/>
+		University user ID ：<input type="text" name="university_user_id" value="${university.university_user_id }"disabled/>
 	<br/>
 	
-	name ：<input type="text" name="username" value="${university.username }" disabled />
-	<br/>
 
 </form>
 <h1>Update the values below</h1>
-<form action="<c:url value='/universityServletUpdate'/>" method="post">
-		<input type="text" name="method" value="update"/>
-				<input type="hidden" name="userid" value="${university.userid }"/>
-	Name：<input type="text" name="username" value="${university.username }"/>
-	
-	<span style="color: red; font-weight: 900">${errors.password }</span>
+<form action="<c:url value='/UniversityServletUpdate'/>" method="post">
+	<input type="hidden" name="method" value="update"/>
+	<input type="hidden" name="university_id" value="${university.university_id }"/>
+		
+		
+	University Name ：<input type="text" name="university_name" value="${form.university_name }"/>
 	<br/>
+	University user ID ：<input type="text" name="university_user_id" value="${form.university_user_id }"/>
+	<br/>				
+					
 
-	<input type="submit" value="Update university"/>
+	<input type="submit" value="Update University"/>
 </form>
 
 </body>

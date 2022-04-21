@@ -118,6 +118,19 @@
     <url-pattern>/UniversityServletDelete</url-pattern>
   </servlet-mapping>
       
+
+  <servlet>
+    <description></description>
+    <display-name>UniversityServletUpdate</display-name>
+    <servlet-name>UniversityServletUpdate</servlet-name>
+    <servlet-class>university.web.servlet.UniversityServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UniversityServletUpdate</servlet-name>
+    <url-pattern>/UniversityServletUpdate</url-pattern>
+  </servlet-mapping>
+      
+
   
   
   <servlet>

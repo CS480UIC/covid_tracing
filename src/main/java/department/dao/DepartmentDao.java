@@ -96,7 +96,7 @@ public class DepartmentDao {
 //			Class.forName("com.mysql.cj.jdbc.Driver");
 //			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/bookstore", MySQL_user, MySQL_password);
 //			
-//			String sql = "UPDATE entity1 SET password = ?, email = ? where username = ?;";
+//			String sql = "UPDATE entity1 SET password = ?, email = ? where username = ?";
 //			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 //		    preparestatement.setString(1,form.getPassword());
 //			preparestatement.setString(2,form.getEmail());

@@ -203,6 +203,22 @@
     <servlet-name>findAll</servlet-name>
     <url-pattern>/findAll</url-pattern>
   </servlet-mapping>
+
+
+  <servlet>
+    <description></description>
+    <display-name>OldUniversity</display-name>
+    <servlet-name>OldUniversity</servlet-name>
+    
+    <servlet-class>university.web.servlet.OldUniversity</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>OldUniversity</servlet-name>
+    <url-pattern>/OldUniversity</url-pattern>
+  </servlet-mapping>
+  
+  
+  
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
     <welcome-file>login.jsp</welcome-file>

@@ -5,7 +5,8 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
+import java.util.ArrayList;
+import java.util.List;
 
 // testing commit
 
@@ -13,6 +14,7 @@ import java.sql.SQLException;
 //import java.util.List;
 
 import university.domain.University;
+import user.domain.User;
 
 
 /**
@@ -133,6 +135,32 @@ public class UniversityDao {
 			throw new RuntimeException(e);
 		}
 	}
+
+
+	public List<Object> findOldUniversity() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		List<Object> list = new ArrayList<>();
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/bookstore", MySQL_user, MySQL_password);
+			String sql = "select * from old_university_1";
+			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+			ResultSet resultSet = preparestatement.executeQuery();			
+			while(resultSet.next()){
+				University university = new University();
+				university.setUniversity_id(Integer.parseInt(resultSet.getString("university_id")));
+				university.setUniversity_name(resultSet.getString("university_name"));
+				university.setUniversity_user_id(resultSet.getString("university_user_id"));
+	    		list.add(university);
+			 }
+			connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+		return list;
+		
+	}	
+	
+	
 	
 	
 	

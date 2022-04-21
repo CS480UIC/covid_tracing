@@ -1,6 +1,8 @@
 package university.service;
 
 
+import java.util.List;
+
 import university.dao.UniversityDao;
 import university.domain.University;
 
@@ -25,5 +27,8 @@ public class UniversityService {
 		if(entity1.getUniversity_id() != null && entity1.getUniversity_id().equals(form.getUniversity_id())) throw new UniversityException("This university id has been registered before!");
 		universityDao.add(form);
 	}
-
+	public List<Object> findOldUniversity() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		return universityDao.findOldUniversity();
+		
+	}
 }

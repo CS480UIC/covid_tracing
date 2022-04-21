@@ -72,7 +72,7 @@ public class UniversityServletDelete extends HttpServlet {
 				e1.printStackTrace();
 			}
 			request.setAttribute("msg", "University Deleted");
-			request.getRequestDispatcher("/jsps/university/university_read_output.jsp").forward(request, response);
+			request.getRequestDispatcher("/jsps/university/university_delete_output.jsp").forward(request, response);
 		}
 	}
 }

@@ -117,9 +117,14 @@ public class UniversityDao {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/bookstore", MySQL_user, MySQL_password);
+			String sql0 = "set foreign_key_checks=0";
 			
-			String sql = "set foreign_key_checks=0; delete from university where university_id = ?";
+			String sql = "delete from university where university_id = ?";
+			PreparedStatement preparestatement0 = connect.prepareStatement(sql0); 
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+//		    preparestatement0.setInt(1, Integer.parseInt(university_id));
+		    preparestatement0.executeUpdate();
+		    
 		    preparestatement.setInt(1, Integer.parseInt(university_id));
 		    preparestatement.executeUpdate();
 		    connect.close();

@@ -84,7 +84,17 @@
     <url-pattern>/UserServletLogin</url-pattern>
   </servlet-mapping>
   
-  
+   <servlet>
+    <description></description>
+    <display-name>UniversityServletCreate</display-name>
+    <servlet-name>UniversityServletCreate</servlet-name>
+    <servlet-class>university.web.servlet.UniversityServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UniversityServletCreate</servlet-name>
+    <url-pattern>/UniversityServletCreate</url-pattern>
+  </servlet-mapping>
+   
   
   
   <servlet>

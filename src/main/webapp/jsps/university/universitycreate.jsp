@@ -22,15 +22,15 @@
   
   <body>
   <h1>Create a new university</h1>
-<form action="<c:url value='/universityServletCreate'/>" method="post">
-	University Id    :<input type="text" name="userid" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+<form action="<c:url value='/UniversityServletCreate'/>" method="post">
+	University Id    :<input type="text" name="university_id" value="${form.university_id }"/>
+	<span style="color: red; font-weight: 900">${errors.university_id }</span>
 	<br/>
-	University Name ：<input type="text" name="username" value="${form.password }"/>
-	<span style="color: red; font-weight: 900">${errors.password }</span>
+	University Name ：<input type="text" name="university_name" value="${form.university_name }"/>
+	<span style="color: red; font-weight: 900">${errors.university_name }</span>
 	<br/>
-	University City ：<input type="text" name="usercity" value="${form.password }"/>
-	<span style="color: red; font-weight: 900">${errors.password }</span>
+	University user ID ：<input type="text" name="university_user_id" value="${form.university_user_id }"/>
+	<span style="color: red; font-weight: 900">${errors.university_user_id }</span>
 
 	<br/>
 	<input type="submit" value="Create university"/>

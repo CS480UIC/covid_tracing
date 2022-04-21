@@ -22,15 +22,18 @@
   
   <body>
   <h1>Create a new Department</h1>
-<form action="<c:url value='/departmentServletCreate'/>" method="post">
-	Department Id    :<input type="text" name="userid" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+<form action="<c:url value='/DepartmentServletCreate'/>" method="post">
+	Department Id    :<input type="text" name="department_id" value="${form.department_id }"/>
+	<span style="color: red; font-weight: 900">${errors.department_id }</span>
 	<br/>
-	Department Name ：<input type="text" name="username" value="${form.password }"/>
-	<span style="color: red; font-weight: 900">${errors.password }</span>
+	Department Name ：<input type="text" name="department_name" value="${form.department_name }"/>
+	<span style="color: red; font-weight: 900">${errors.department_name }</span>
 	<br/>
-	Department Building_Name ：<input type="text" name="userbuildingname" value="${form.password }"/>
-	<span style="color: red; font-weight: 900">${errors.password }</span>
+	Department Number ：<input type="text" name="department_number" value="${form.department_number }"/>
+	<span style="color: red; font-weight: 900">${errors.department_number }</span>
+	<br/>	
+	University ID ：<input type="text" name="university_id" value="${form.university_id }"/>
+	<span style="color: red; font-weight: 900">${errors.university_id }</span>
 	<br/>	
 	
 	<input type="submit" value="Create department"/>

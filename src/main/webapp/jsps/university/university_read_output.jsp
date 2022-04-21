@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Read university Output</title>
+    <title>Read University Output</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,16 +21,21 @@
   </head>
   
   <body>
-  <h1>Read university Output</h1>
+  <h1>Read University Output</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	Id    :<input type="text" name="userid" value="${univeristy.userid }" disabled/>
+
+	University Id    :<input type="text" name="university_id" value="${university.university_id }"disabled/>
 	<br/>
-	Name：<input type="text" name="username" value="${univeristy.username }" disabled/>
+	University Name ：<input type="text" name="university_name" value="${university.university_name }"disabled/>
 	<br/>
+	University user ID ：<input type="text" name="university_user_id" value="${university.university_user_id }"disabled/>
+	<br/>
+	
+
 
 </form>
 
-<button onclick="window.location.href='<c:url value='/jsps/main.jsp'/>'">Continue</button>
+<button onclick="window.location.href='<c:url value='/jsps/university/universityread.jsp'/>'">Continue</button>
 </body>
 </html>

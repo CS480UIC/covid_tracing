@@ -95,6 +95,18 @@
     <url-pattern>/UniversityServletCreate</url-pattern>
   </servlet-mapping>
    
+   
+  <servlet>
+    <description></description>
+    <display-name>UniversityServletRead</display-name>
+    <servlet-name>UniversityServletRead</servlet-name>
+    <servlet-class>university.web.servlet.UniversityServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UniversityServletRead</servlet-name>
+    <url-pattern>/UniversityServletRead</url-pattern>
+  </servlet-mapping>
+   
   
   
   <servlet>

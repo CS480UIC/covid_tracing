@@ -20,7 +20,7 @@ import entity1.domain.Entity1;
 public class Entity1Dao {
 	
 	/**
-	 * user name to connect to the database 
+	 * user name to connect to the database
 	 */
 	private String MySQL_user = "covid_tracing"; //TODO change user
 	

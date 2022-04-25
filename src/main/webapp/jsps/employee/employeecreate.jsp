@@ -32,6 +32,9 @@
 	Employee Department Id ：<input type="text" name="e_d_id" value="${form.e_d_id }"/>
 	<span style="color: red; font-weight: 900">${errors.e_d_id }</span>
 	<br/>
+	Employee Start Date ：<input type="text" name="start_date" value="${form.e_d_id }"/>
+	<span style="color: red; font-weight: 900">${errors.e_d_id }</span>
+	<br/>
 	<input type="submit" value="Create employee"/>
 </form>
   </body>

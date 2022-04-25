@@ -30,6 +30,8 @@
 	<br/>
 	Employee Department Id ：<input type="text" name="userd_id" value="${employee.userd_id }" disabled/>
 	<br/>
+	Employee Start Date ：<input type="text" name="start_date" value="${employee.start_date }" disabled/>
+	<br/>
 
 </form>
 

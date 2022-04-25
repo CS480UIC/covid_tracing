@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import employee.dao.Entity1Dao;
-import employee.domain.Entity1;
+import employee.domain.Employee;
 
 
 /**
@@ -37,7 +37,7 @@ public class Entity1ServletDelete extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String method = request.getParameter("method");
 		Entity1Dao entity1Dao = new Entity1Dao();
-		Entity1 entity1 = null;
+		Employee entity1 = null;
 		if(method.equals("search"))
 		{
 			try {

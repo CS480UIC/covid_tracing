@@ -6,7 +6,7 @@ package employee.domain;
  * @author Aayush Makharia
  * 
  */
-public class Entity1 {
+public class Employee {
 	/*
 	 * Correspond to the user table
 	 */

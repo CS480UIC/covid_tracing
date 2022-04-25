@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import employee.dao.Entity1Dao;
-import employee.domain.Entity1;
+import employee.domain.Employee;
 
 
 /**
@@ -37,7 +37,7 @@ public class Entity1ServletRead extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		Entity1 entity1 = null;
+		Employee entity1 = null;
 		Entity1Dao entity1Dao = new Entity1Dao();
 		
 		try {

@@ -17,7 +17,7 @@ import employee.domain.Employee;
 /**
  * DDL functions performed in database
  */
-public class Entity1Dao {
+public class EmployeeDao {
 	
 	/**
 	 * user name to connect to the database

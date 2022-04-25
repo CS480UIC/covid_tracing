@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import employee.dao.Entity1Dao;
+import employee.dao.EmployeeDao;
 import employee.domain.Employee;
 
 
@@ -16,13 +16,13 @@ import employee.domain.Employee;
  * Servlet implementation class UserServlet
  */
 
-public class Entity1ServletRead extends HttpServlet {
+public class EmployeeServletRead extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Entity1ServletRead() {
+    public EmployeeServletRead() {
         super();
     }
     
@@ -38,7 +38,7 @@ public class Entity1ServletRead extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		Employee entity1 = null;
-		Entity1Dao entity1Dao = new Entity1Dao();
+		EmployeeDao entity1Dao = new EmployeeDao();
 		
 		try {
 			entity1 = entity1Dao.findByUsername(request.getParameter("username"));

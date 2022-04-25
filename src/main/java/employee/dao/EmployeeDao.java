@@ -29,29 +29,31 @@ public class EmployeeDao {
 	 */
 	private String MySQL_password = "annandliz"; //TODO change password
 
-	public Employee findByUsername(String username) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
-		Employee entity1 = new Employee();
+	public Employee findByEmployeeId(Integer employee_id) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+		Employee employee = new Employee();
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/bookstore", MySQL_user, MySQL_password);
-		    String sql = "select * from entity1 where username=?";
+		    String sql = "select * from employee where employee_id =1";
 		    PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setString(1,username);
+		    preparestatement.setInt(1,employee_id);
 		    ResultSet resultSet = preparestatement.executeQuery();
 
 		    while(resultSet.next()){
-		    	String user_name = resultSet.getString("username");
-		    	if(user_name.equals(username)){
-		    		entity1.setUsername(resultSet.getString("username"));
-		    		entity1.setPassword(resultSet.getString("password"));
-		    		entity1.setEmail(resultSet.getString("email"));		
+		    	Integer id = Integer.parseInt(resultSet.getString("employee_id"));
+		    	if(id == (employee_id)){
+		    		employee.setDepartment_id(Integer.parseInt(resultSet.getString("department_id")));
+		    		employee.setEmployee_full_name(resultSet.getString("employee_full_name"));
+		    		employee.setEmployee_id(id);
+		    		employee.setEmployee_start_date(java.sql.Date.valueOf(resultSet.getString("employee_date")));
+		    		
 		    	}
 		    }
 		    connect.close();
 		} catch(SQLException e) {
 			throw new RuntimeException(e);
 		}
-		return entity1;
+		return employee;
 	}	
 	
 	/**
@@ -67,11 +69,12 @@ public class EmployeeDao {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/bookstore", MySQL_user, MySQL_password);
 			
-			String sql = "insert into entity1 values(?,?,?)";
+			//need to change this
+			String sql = "insert into employee values(?,?,?)";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setString(1,form.getUsername());
-		    preparestatement.setString(2,form.getPassword());
-		    preparestatement.setString(3,form.getEmail());
+//		    preparestatement.setString(1,form.getUsername());
+//		    preparestatement.setString(2,form.getPassword());
+//		    preparestatement.setString(3,form.getEmail());
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {

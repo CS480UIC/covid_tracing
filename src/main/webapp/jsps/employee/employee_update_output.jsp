@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Delete university</title>
+    <title>Update Employee</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,26 +21,34 @@
   </head>
   
   <body>
-  <h1>Update university</h1>
+  <h1>Update employee</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	id    :<input type="text" name=userid value="${university.userid }" disabled/>
+	Employee Id     :<input type="text" name="employee_id" value="${employee.employee_id }" disabled/>
 	<br/>
-	
-	name ：<input type="text" name="username" value="${university.username }" disabled />
+	Employee Full Name ：<input type="text" name="employee_full_name" value="${employee.employee_full_name }" disabled/>
 	<br/>
+	Employee Department Id ：<input type="text" name="department_id" value="${employee.department_id }" disabled/>
+	<br/>
+	Employee Start Date ：<input type="text" name="employee_start_date" value="${employee.employee_start_date }" disabled/>
+	<br/>
+
 
 </form>
 <h1>Update the values below</h1>
-<form action="<c:url value='/universityServletUpdate'/>" method="post">
-		<input type="text" name="method" value="update"/>
-				<input type="hidden" name="userid" value="${university.userid }"/>
-	Name：<input type="text" name="username" value="${university.username }"/>
-	
-	<span style="color: red; font-weight: 900">${errors.password }</span>
+<form action="<c:url value='/EmployeeServletUpdate'/>" method="post">
+		<input type="hidden" name="method" value="update"/>
+		<input type="hidden" name="employee_id" value="${employee.employee_id }"/>
+				
+	Employee Full Name ：<input type="text" name="employee_full_name" value="${form.employee_full_name }" />
+	<span style = "color:red; font-weight: 900">${errors.employee_full_name }</span>
+	<br/>
+	Employee Department Id ：<input type="text" name="department_id" value="${form.department_id }" />
+	<br/>
+	Employee Start Date ：<input type="text" name="employee_start_date" value="${form.employee_start_date }" />
 	<br/>
 
-	<input type="submit" value="Update university"/>
+	<input type="submit" value="Update employee"/>
 </form>
 
 </body>

@@ -40,59 +40,64 @@ public class EmployeeServletUpdate extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-//		String method = request.getParameter("method");
-//		EmployeeDao entity1dao = new EmployeeDao();
-//		Employee entity1 = null;
-//
-//		if(method.equals("search"))
-//		{
-//			try {
-//				entity1 = entity1dao.findByEmployeeId(request.getParameter("username"));
-//			} catch (ClassNotFoundException e1) {
-//				e1.printStackTrace();
-//			} catch (InstantiationException e1) {
-//				e1.printStackTrace();
-//			} catch (IllegalAccessException e1) {
-//				e1.printStackTrace();
-//			}
-//
-//			if(entity1.getUsername()!=null){
-//				request.setAttribute("entity1", entity1);
-//				request.getRequestDispatcher("/jsps/entity1/entity1_update_output.jsp").forward(request, response);
-//
-//			}
-//			else{
-//				request.setAttribute("msg", "Entity not found");
-//				request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
-//			}
-//		}
-//		else if(method.equals("update"))
-//		{
-//			Map<String,String[]> paramMap = request.getParameterMap();
-//			Employee form = new Employee();
-//			List<String> info = new ArrayList<String>();
-//
-//			for(String name : paramMap.keySet()) {
-//				String[] values = paramMap.get(name);
-//				info.add(values[0]);
-//			}
+		String method = request.getParameter("method");
+		EmployeeDao employeedao = new EmployeeDao();
+		Employee employee = null;
+
+		if(method.equals("search"))
+		{
+			try {
+				employee = employeedao.findByEmployeeId(Integer.parseInt( request.getParameter("employee_id")));
+			} catch (ClassNotFoundException e1) {
+				e1.printStackTrace();
+			} catch (InstantiationException e1) {
+				e1.printStackTrace();
+			} catch (IllegalAccessException e1) {
+				e1.printStackTrace();
+			}
+
+			if(employee.getEmployee_full_name()!=null){
+				request.setAttribute("employee", employee);
+				request.getRequestDispatcher("/jsps/employee/employee_update_output.jsp").forward(request, response);
+
+			}
+			else{
+				request.setAttribute("msg", "Employee not found");
+				request.getRequestDispatcher("/jsps/employee/employee_read_output.jsp").forward(request, response);
+			}
+		}
+		else if(method.equals("update"))
+		{
+			Map<String,String[]> paramMap = request.getParameterMap();
+			Employee form = new Employee();
+			List<String> info = new ArrayList<String>();
+
+			for(String name : paramMap.keySet()) {
+				String[] values = paramMap.get(name);
+				info.add(values[0]);
+			}
 //			form.setPassword(info.get(2));
 //			form.setEmail(info.get(3));
 //			form.setUsername(request.getParameter("username"));
-//
-//			try {
-//				entity1dao.update(form);
-//
-//			} catch (ClassNotFoundException e1) {
-//				e1.printStackTrace();
-//			} catch (InstantiationException e1) {
-//				e1.printStackTrace();
-//			} catch (IllegalAccessException e1) {
-//				e1.printStackTrace();
-//			}
-//			request.setAttribute("msg", "Entity Updated");
-//			request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
-//		}
+			
+			form.setEmployee_id(Integer.parseInt(info.get(1)));
+			form.setEmployee_full_name(info.get(2));
+			form.setDepartment_id(Integer.parseInt(info.get(3)));
+			form.setEmployee_start_date(java.sql.Date.valueOf(info.get(4)) );
+			
+			try {
+				employeedao.update(form);
+
+			} catch (ClassNotFoundException e1) {
+				e1.printStackTrace();
+			} catch (InstantiationException e1) {
+				e1.printStackTrace();
+			} catch (IllegalAccessException e1) {
+				e1.printStackTrace();
+			}
+			request.setAttribute("msg", "Employee Updated");
+			request.getRequestDispatcher("/jsps/employee/employee_read_output.jsp").forward(request, response);
+		}
 	}
 }
 

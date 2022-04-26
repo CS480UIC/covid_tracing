@@ -22,10 +22,10 @@
   
   <body>
   <h1>Update Employee</h1>
-<form action="<c:url value='/employeeServletUpdate'/>" method="post">
+<form action="<c:url value='/EmployeeServletUpdate'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
-	Update Employee Name   :<input type="text" name="username" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+	Update Employee Id   :<input type="text" name="employee_id" value="${form.employee_id }"/>
+	<span style="color: red; font-weight: 900">${errors.employee_id }</span>
 	<br/>
 	<input type="submit" value="Update employee"/>
 </form>

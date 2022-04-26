@@ -12,6 +12,7 @@ import vaccine_status.domain.Vaccine_status;
 
 /**
  * Servlet implementation class UserServlet
+ * 
  */
 
 public class Vaccine_statusServletDelete extends HttpServlet {

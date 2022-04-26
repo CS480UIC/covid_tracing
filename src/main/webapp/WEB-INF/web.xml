@@ -247,6 +247,18 @@
     <url-pattern>/Vaccine_statusServletCreate</url-pattern>
   </servlet-mapping>
   
+    <servlet>
+    <description></description>
+    <display-name>Vaccine_statusServletRead</display-name>
+    <servlet-name>Vaccine_statusServletRead</servlet-name>
+    <servlet-class>vaccine_status.web.servlet.Vaccine_statusServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Vaccine_statusServletRead</servlet-name>
+    <url-pattern>/Vaccine_statusServletRead</url-pattern>
+  </servlet-mapping>
+  
+  
    <servlet>
     <description></description>
     <display-name>Department_employeeServletCreate</display-name>

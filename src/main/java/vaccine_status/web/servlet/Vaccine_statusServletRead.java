@@ -37,28 +37,28 @@ public class Vaccine_statusServletRead extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//		Vaccine_status entity1 = null;
-//		Vaccine_statusDao entity1Dao = new Vaccine_statusDao();
-//		
-//		try {
-//			entity1 = entity1Dao.findByEmployee_id(request.getParameter("username"));
-//		} catch (ClassNotFoundException e1) {
-//			e1.printStackTrace();
-//		} catch (InstantiationException e1) {
-//			e1.printStackTrace();
-//		} catch (IllegalAccessException e1) {
-//			e1.printStackTrace();
-//		}
-//		
-//		if(entity1.getUsername()!=null){
-//					System.out.println(entity1);
-//					request.setAttribute("entity1", entity1);
-//					request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
-//			}
-//			else{
-//			request.setAttribute("msg", "Entity not found");
-//			request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
-//		}
+		Vaccine_status vaccine_status = null;
+		Vaccine_statusDao vaccine_statusDao = new Vaccine_statusDao();
+		
+		try {
+			vaccine_status = vaccine_statusDao.findByEmployee_id(Integer.parseInt( request.getParameter("employee_id")));
+		} catch (ClassNotFoundException e1) {
+			e1.printStackTrace();
+		} catch (InstantiationException e1) {
+			e1.printStackTrace();
+		} catch (IllegalAccessException e1) {
+			e1.printStackTrace();
+		}
+		
+		if(vaccine_status.getEmployee_id()!=null){
+					//System.out.println(vaccine_status);
+					request.setAttribute("vaccine_status", vaccine_status);
+					request.getRequestDispatcher("/jsps/vaccine_status/vaccine_status_read_output.jsp").forward(request, response);
+			}
+			else{
+			request.setAttribute("msg", "Entity not found");
+			request.getRequestDispatcher("/jsps/vaccine_status/vaccine_status_read_output.jsp").forward(request, response);
+		}
 	}
 }
 

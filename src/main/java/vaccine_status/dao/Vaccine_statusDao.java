@@ -92,22 +92,24 @@ public class Vaccine_statusDao {
 	 * @throws InstantiationException
 	 * @throws IllegalAccessException
 	 */
-//	public void update(Vaccine_status form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
-//		try {
-//			Class.forName("com.mysql.cj.jdbc.Driver");
-//			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/bookstore", MySQL_user, MySQL_password);
-//			
-//			String sql = "UPDATE entity1 SET password = ?, email = ? where username = ?;";
-//			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-//		    preparestatement.setString(1,form.getPassword());
-//			preparestatement.setString(2,form.getEmail());
-//		    preparestatement.setString(3,form.getUsername());
-//		    preparestatement.executeUpdate();
-//		    connect.close();
-//		} catch(SQLException e) {
-//			throw new RuntimeException(e);
-//		}
-//	}
+	public void update(Vaccine_status form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/bookstore", MySQL_user, MySQL_password);
+			
+			String sql = "UPDATE vaccine_status SET vaccine_name = ?, vaccine_date = ?, dose_number = ? where employee_id = ?;";
+			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+			
+			preparestatement.setString(1,form.getVaccine_name());
+			preparestatement.setDate(2,form.getVaccine_date());
+		    preparestatement.setInt(3,form.getDose_number());
+			preparestatement.setInt(4,form.getEmployee_id());
+		    preparestatement.executeUpdate();
+		    connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+	}
 	
 	
 	/**

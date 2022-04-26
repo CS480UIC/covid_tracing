@@ -24,11 +24,11 @@
   <h1>Read department_employee Output</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	User    :<input type="text" name="username" value="${department_employee.username }" disabled/>
+	Department department id ：<input type="text" name="department_department_id" value="${department_employee.department_department_id }" disabled/>
 	<br/>
-	Password：<input type="text" name="password" value="${department_employee.password }" disabled/>
+	Employee employee Id ：<input type="text" name="employee_employee_id" value="${department_employee.employee_employee_id }" disabled/>
 	<br/>
-	Email	：<input type="text" name="email" value="${department_employee.email }" disabled/>
+	Department employee Id ：<input type="text" name="department_employee_id" value="${department_employee.department_employee_id }" disabled/>
 	<br/>
 </form>
 

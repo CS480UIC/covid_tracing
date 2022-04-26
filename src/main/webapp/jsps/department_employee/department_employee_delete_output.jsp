@@ -25,13 +25,14 @@
 <p style="color: red; font-weight: 900">${msg }</p>
 <form action="<c:url value='/Department_employeeServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="delete"/>
-		<input type="hidden" name="username" value="${department_employee.username }"/>
-	User    :<input type="text" name="username" value="${department_employee.username }" disabled/>
+		<input type="hidden" name="department_employee_id" value="${department_employee.department_employee_id }"/>
+		
+	Department department id    :<input type="text" name="department_department_id" value="${department_employee.department_department_id }" disabled/>
 	<br/>
 	
-	Password：<input type="text" name="password" value="${department_employee.password }" disabled/>
+	Employee employee id：<input type="text" name="employee_employee_id" value="${department_employee.employee_employee_id }" disabled/>
 	<br/>
-	Email	：<input type="text" name="email" value="${department_employee.email }" disabled/>
+	Department Employee id	：<input type="text" name="department_employee_id" value="${department_employee.department_employee_id }" disabled/>
 	<br/>
 	<input type="submit" value="Delete department_employee"/>
 </form>

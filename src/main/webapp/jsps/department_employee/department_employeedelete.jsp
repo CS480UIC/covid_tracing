@@ -24,8 +24,8 @@
   <h1>Delete department_employee</h1>
 <form action="<c:url value='/Department_employeeServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
-	Delete User   :<input type="text" name="username" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+	Delete Department Employee Id   :<input type="text" name="deparment_employee_id" value="${form.deparment_employee_id }"/>
+	<span style="color: red; font-weight: 900">${errors.deparment_employee_id }</span>
 	<br/>
 	<input type="submit" value="Delete department_employee"/>
 </form>

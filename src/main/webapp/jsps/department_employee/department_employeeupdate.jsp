@@ -24,8 +24,8 @@
   <h1>Update</h1>
 <form action="<c:url value='/Department_employeeServletUpdate'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
-	Update User   :<input type="text" name="username" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+	Update Department Employee Id   :<input type="text" name="department_employee_id" value="${form.department_employee_id }"/>
+	<span style="color: red; font-weight: 900">${errors.department_employee_id }</span>
 	<br/>
 	<input type="submit" value="Update department_employee"/>
 </form>

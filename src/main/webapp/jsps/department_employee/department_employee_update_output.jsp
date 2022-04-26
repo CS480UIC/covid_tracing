@@ -24,24 +24,23 @@
   <h1>Update department_employee</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	User    :<input type="text" name="username1" value="${department_employee.username }" disabled/>
+	Department department id ：<input type="text" name="department_department_id" value="${department_employee.department_department_id }" disabled/>
 	<br/>
-	
-	Password：<input type="text" name="password1" value="${department_employee.password }" disabled />
+	Employee employee Id ：<input type="text" name="employee_employee_id" value="${department_employee.employee_employee_id }" disabled/>
 	<br/>
-	Email	：<input type="text" name="email1" value="${department_employee.email }" disabled/>
+	Department employee Id ：<input type="text" name="department_employee_id" value="${department_employee.department_employee_id }" disabled/>
 	<br/>
 </form>
 <h1>Update the values below</h1>
-<form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
+<form action="<c:url value='/Department_employeeServletUpdate'/>" method="post">
 		<input type="hidden" name="method" value="update"/>
-				<input type="hidden" name="username" value="${department_employee.username }"/>
-	Password：<input type="password" name="password" value="${form.password }"/>
-	<span style="color: red; font-weight: 900">${errors.password }</span>
+				<input type="hidden" name="department_employee_id" value="${department_employee.department_employee_id }"/>
+				
+	Department department id ：<input type="text" name="department_department_id" value="${department_employee.department_department_id }" disabled/>
 	<br/>
-	Email	：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	Employee employee Id ：<input type="text" name="employee_employee_id" value="${department_employee.employee_employee_id }" disabled/>
 	<br/>
+	
 	<input type="submit" value="Update department_employee"/>
 </form>
 

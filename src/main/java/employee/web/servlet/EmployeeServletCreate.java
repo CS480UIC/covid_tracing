@@ -6,6 +6,8 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
+import java.sql.Date;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -50,9 +52,13 @@ public class EmployeeServletCreate extends HttpServlet {
 			String[] values = paramMap.get(name);
 			info.add(values[0]);
 		}
-		form.setUsername(info.get(0));
-		form.setPassword(info.get(1));
-		form.setEmail(info.get(2));		
+
+		form.setEmployee_id(Integer.parseInt(info.get(0)));
+		form.setEmployee_full_name(info.get(1));
+		form.setDepartment_id(Integer.parseInt(info.get(2)));
+		form.setEmployee_start_date(java.sql.Date.valueOf(info.get(3)) );
+		
+		
 		
 		try {
 			entity1service.create(form);

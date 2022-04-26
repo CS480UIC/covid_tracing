@@ -47,7 +47,7 @@ public class Entity1ServletUpdate extends HttpServlet {
 		if(method.equals("search"))
 		{
 			try {
-				entity1 = entity1dao.findByEmployeeId(request.getParameter("username"));
+				entity1 = entity1dao.findByUsername(request.getParameter("username"));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {

@@ -10,7 +10,7 @@ import employee.domain.Employee;
  *
  */
 public class EmployeeService {
-	private EmployeeDao entity1Dao = new EmployeeDao();
+	private EmployeeDao employeeDao = new EmployeeDao();
 	
 	/**
 	 * register a Entity1
@@ -21,27 +21,9 @@ public class EmployeeService {
 	 */
 	public void create(Employee form) throws EmployeeException, ClassNotFoundException, InstantiationException, IllegalAccessException{
 		// check the primary key of Entity1
-		Employee entity1 = entity1Dao.findByEmployeeId(form.getUsername());
-		if(entity1.getUsername()!=null && entity1.getUsername().equals(form.getUsername())) throw new EmployeeException("This user name has been registered!");
-		entity1Dao.add(form);
+		Employee employee = employeeDao.findByEmployeeId(form.getEmployee_id());
+		if(employee.getEmployee_id()!=null && employee.getEmployee_id().equals(form.getEmployee_id())) throw new EmployeeException("This Employee ID has been registered!");
+		employeeDao.add(form);
 	}
-	/**
-	 * Login function
-	 * @param form
-	 * @return
-	 * @throws UserException 
-	 * @throws ClassNotFoundException 
-	 * @throws IllegalAccessException 
-	 * @throws InstantiationException 
-	 */
-	public void login(Employee form) throws EmployeeException, ClassNotFoundException, InstantiationException, IllegalAccessException {
-		Employee user = entity1Dao.findByEmployeeId(form.getUsername());
-		if(user.getUsername()==null) throw new EmployeeException("The user is not in the database");
-		
-		String password = user.getPassword();
-		
-		if(password!=null && !password.equals(form.getPassword()))
-			throw new EmployeeException(" The password is not right");
-		
-	}
+
 }

@@ -29,23 +29,23 @@ public class EmployeeDao {
 	 */
 	private String MySQL_password = "annandliz"; //TODO change password
 
-	public Employee findByEmployeeId(Integer employee_id) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+	public Employee findByEmployeeId(Integer employee_id_p) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		Employee employee = new Employee();
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/bookstore", MySQL_user, MySQL_password);
-		    String sql = "select * from employee where employee_id =1";
+		    String sql = "select * from employee where employee_id = ?";
 		    PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setInt(1,employee_id);
+		    preparestatement.setInt(1,employee_id_p);
 		    ResultSet resultSet = preparestatement.executeQuery();
 
 		    while(resultSet.next()){
 		    	Integer id = Integer.parseInt(resultSet.getString("employee_id"));
-		    	if(id == (employee_id)){
-		    		employee.setDepartment_id(Integer.parseInt(resultSet.getString("department_id")));
-		    		employee.setEmployee_full_name(resultSet.getString("employee_full_name"));
+		    	if(id == employee_id_p){
 		    		employee.setEmployee_id(id);
-		    		employee.setEmployee_start_date(java.sql.Date.valueOf(resultSet.getString("employee_date")));
+		    		employee.setEmployee_full_name(resultSet.getString("employee_full_name"));
+		    		employee.setDepartment_id(Integer.parseInt(resultSet.getString("department_id")));
+		    		employee.setEmployee_start_date(java.sql.Date.valueOf(resultSet.getString("employee_start_date")));
 		    		
 		    	}
 		    }
@@ -57,7 +57,7 @@ public class EmployeeDao {
 	}	
 	
 	/**
-	 * insert Entity1
+	 * insert Employee
 	 * @param form
 	 * @throws ClassNotFoundException 
 	 * @throws IllegalAccessException 
@@ -70,11 +70,12 @@ public class EmployeeDao {
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/bookstore", MySQL_user, MySQL_password);
 			
 			//need to change this
-			String sql = "insert into employee values(?,?,?)";
+			String sql = "insert into employee (employee_id,employee_full_name,department_id, employee_start_date) values(?,?,?,?)";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-//		    preparestatement.setString(1,form.getUsername());
-//		    preparestatement.setString(2,form.getPassword());
-//		    preparestatement.setString(3,form.getEmail());
+		    preparestatement.setInt(1,form.getEmployee_id());
+		    preparestatement.setString(2,form.getEmployee_full_name());
+		    preparestatement.setInt(3,form.getDepartment_id());
+		    preparestatement.setDate(4,form.getEmployee_start_date());
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {
@@ -83,48 +84,48 @@ public class EmployeeDao {
 	}
 	
 	
-	/**
-	 * @param form
-	 * @throws ClassNotFoundException
-	 * @throws InstantiationException
-	 * @throws IllegalAccessException
-	 */
-	public void update(Employee form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
-		try {
-			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/bookstore", MySQL_user, MySQL_password);
-			
-			String sql = "UPDATE entity1 SET password = ?, email = ? where username = ?;";
-			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setString(1,form.getPassword());
-			preparestatement.setString(2,form.getEmail());
-		    preparestatement.setString(3,form.getUsername());
-		    preparestatement.executeUpdate();
-		    connect.close();
-		} catch(SQLException e) {
-			throw new RuntimeException(e);
-		}
-	}
-	
-	
-	/**
-	 * @param username
-	 * @throws ClassNotFoundException
-	 * @throws InstantiationException
-	 * @throws IllegalAccessException
-	 */
-	public void delete(String username) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
-		try {
-			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/bookstore", MySQL_user, MySQL_password);
-			
-			String sql = "delete from entity1 where username = ?";
-			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setString(1,username);
-		    preparestatement.executeUpdate();
-		    connect.close();
-		} catch(SQLException e) {
-			throw new RuntimeException(e);
-		}
-	}
+//	/**
+//	 * @param form
+//	 * @throws ClassNotFoundException
+//	 * @throws InstantiationException
+//	 * @throws IllegalAccessException
+//	 */
+//	public void update(Employee form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+//		try {
+//			Class.forName("com.mysql.cj.jdbc.Driver");
+//			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/bookstore", MySQL_user, MySQL_password);
+//			
+//			String sql = "UPDATE entity1 SET password = ?, email = ? where username = ?;";
+//			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+//		    preparestatement.setString(1,form.getPassword());
+//			preparestatement.setString(2,form.getEmail());
+//		    preparestatement.setString(3,form.getUsername());
+//		    preparestatement.executeUpdate();
+//		    connect.close();
+//		} catch(SQLException e) {
+//			throw new RuntimeException(e);
+//		}
+//	}
+//	
+//	
+//	/**
+//	 * @param username
+//	 * @throws ClassNotFoundException
+//	 * @throws InstantiationException
+//	 * @throws IllegalAccessException
+//	 */
+//	public void delete(String username) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+//		try {
+//			Class.forName("com.mysql.cj.jdbc.Driver");
+//			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/bookstore", MySQL_user, MySQL_password);
+//			
+//			String sql = "delete from entity1 where username = ?";
+//			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+//		    preparestatement.setString(1,username);
+//		    preparestatement.executeUpdate();
+//		    connect.close();
+//		} catch(SQLException e) {
+//			throw new RuntimeException(e);
+//		}
+//	}
 }

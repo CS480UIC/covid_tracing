@@ -22,20 +22,20 @@
   
   <body>
   <h1>Create a new employee</h1>
-<form action="<c:url value='/employeeServletCreate'/>" method="post">
-	Employee Id    :<input type="text" name="userid" value="${form.userid }"/>
-	<span style="color: red; font-weight: 900">${errors.userid }</span>
+<form action="<c:url value='/EmployeeServletCreate'/>" method="post">
+	Employee Id    :<input type="text" name="employee_id" value="${form.employee_id }"/>
+	<span style="color: red; font-weight: 900">${errors.employee_id }</span>
 	<br/>
-	Employee Full Name ：<input type="text" name="username" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+	Employee Full Name ：<input type="text" name="employee_full_name" value="${form.employee_full_name }"/>
+	<span style="color: red; font-weight: 900">${errors.employee_full_name }</span>
 	<br/>	
-	Employee Department Id ：<input type="text" name="e_d_id" value="${form.e_d_id }"/>
+	Employee Department Id ：<input type="text" name="department_id" value="${form.department_id }"/>
+	<span style="color: red; font-weight: 900">${errors.department_id }</span>
+	<br/>
+	Employee Start Date ：<input type="text" name="employee_start_date" value="${form.employee_start_date }"/>
 	<span style="color: red; font-weight: 900">${errors.e_d_id }</span>
 	<br/>
-	Employee Start Date ：<input type="text" name="start_date" value="${form.e_d_id }"/>
-	<span style="color: red; font-weight: 900">${errors.e_d_id }</span>
-	<br/>
-	<input type="submit" value="Create employee"/>
+	<input type="submit" value="Create Employee"/>
 </form>
   </body>
 </html>

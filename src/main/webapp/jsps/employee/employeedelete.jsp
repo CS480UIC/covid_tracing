@@ -21,11 +21,11 @@
   </head>
   
   <body>
-  <h1>Delete university</h1>
-<form action="<c:url value='/employeeServletDelete'/>" method="post">
+  <h1>Delete employee</h1>
+<form action="<c:url value='/EmployeeServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
-	Delete Employee Name :<input type="text" name="userid" value="${form.userid }"/>
-	<span style="color: red; font-weight: 900">${errors.userid }</span>
+	Delete Employee Id :<input type="text" name="employee_id" value="${form.employee_id }"/>
+	<span style="color: red; font-weight: 900">${errors.employee_id }</span>
 	<br/>
 	<input type="submit" value="Delete employee"/>
 </form>

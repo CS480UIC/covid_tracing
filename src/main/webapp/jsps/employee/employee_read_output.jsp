@@ -24,13 +24,13 @@
   <h1>Read employee Output</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	Employee Id     :<input type="text" name="userid" value="${employee.userid }" disabled/>
+	Employee Id     :<input type="text" name="employee_id" value="${employee.employee_id }" disabled/>
 	<br/>
-	Employee Full Name ：<input type="text" name="username" value="${employee.username }" disabled/>
+	Employee Full Name ：<input type="text" name="employee_full_name" value="${employee.employee_full_name }" disabled/>
 	<br/>
-	Employee Department Id ：<input type="text" name="userd_id" value="${employee.userd_id }" disabled/>
+	Employee Department Id ：<input type="text" name="department_id" value="${employee.department_id }" disabled/>
 	<br/>
-	Employee Start Date ：<input type="text" name="start_date" value="${employee.start_date }" disabled/>
+	Employee Start Date ：<input type="text" name="employee_start_date" value="${employee.employee_start_date }" disabled/>
 	<br/>
 
 </form>

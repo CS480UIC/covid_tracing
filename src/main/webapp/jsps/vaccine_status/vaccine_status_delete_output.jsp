@@ -23,18 +23,18 @@
   <body>
   <h1>Delete vaccine_status</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/vaccine_statusServletDelete'/>" method="post">
+<form action="<c:url value='/Vaccine_statusServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="delete"/>
-		<input type="hidden" name="vaccinename" value="${vaccine_status.vaccinename }"/>
-	Vaccine Name    :<input type="text" name="vaccinename" value="${vaccine_status.vaccinename }" disabled/>
+		<input type="hidden" name="employee_id" value="${vaccine_status.employee_id }"/>
+	Employee Id	：<input type="text" name="employee_id" value="${vaccine_status.employee_id }" disabled/>
+	<br/>
+	Vaccine Name    :<input type="text" name="vaccine_name" value="${vaccine_status.vaccine_name }" disabled/>
+	<br/>
+	Vaccine Date：<input type="text" name="vaccine_date" value="${vaccine_status.vaccine_date }" disabled/>
+	<br/>
+	Dose Number：<input type="text" name="dose_number" value="${vaccine_status.dose_number }" disabled/>
 	<br/>
 	
-	Date：<input type="text" name="date" value="${vaccine_status.date }" disabled/>
-	<br/>
-	Employee Id	：<input type="text" name="userid" value="${vaccine_status.userid }" disabled/>
-	<br/>
-	Student Id	：<input type="text" name="userid" value="${vaccine_status.userid }" disabled/>
-	<br/>
 	<input type="submit" value="Delete vaccine_status"/>
 </form>
 

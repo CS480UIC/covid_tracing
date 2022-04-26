@@ -22,13 +22,10 @@
   
   <body>
   <h1>Update vaccine_status</h1>
-<form action="<c:url value='/vaccine_statusServletUpdate'/>" method="post">
+<form action="<c:url value='/Vaccine_statusServletUpdate'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
-	Update Vaccine Name   :<input type="text" name="vaccinename" value="${form.vaccinename }"/>
-	<span style="color: red; font-weight: 900">${errors.vaccinename }</span>
-	<br/>
-	Update Vaccine Date   :<input type="text" name="date" value="${form.date }"/>
-	<span style="color: red; font-weight: 900">${errors.date }</span>
+	Update Employee Id   :<input type="text" name="employee_id" value="${form.employee_id }"/>
+	<span style="color: red; font-weight: 900">${errors.employee_id }</span>
 	<br/>
 	<input type="submit" value="Update vaccine_status"/>
 </form>

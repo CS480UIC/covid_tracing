@@ -24,13 +24,13 @@
   <h1>Read vaccine_status Output</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	Vaccine Name    :<input type="text" name="vaccinename" value="${vaccine_status.vaccinename }" disabled/>
+	Employee Id     :<input type="text" name="employee_id" value="${vaccine_status.employee_id }" disabled/>
 	<br/>
-	Date：<input type="text" name="date" value="${vaccine_status.date }" disabled/>
+	Vaccine Name ：<input type="text" name="vaccine_name" value="${vaccine_status.vaccine_name }" disabled/>
 	<br/>
-	Employee Id	：<input type="text" name="userid" value="${vaccine_status.userid }" disabled/>
+	Vaccine Date ：<input type="text" name="vaccine_date" value="${vaccine_status.vaccine_date }" disabled/>
 	<br/>
-	Student Id	：<input type="text" name="userid" value="${vaccine_status.userid }" disabled/>
+	Dose Number ：<input type="text" name="dose_number" value="${vaccine_status.dose_number }" disabled/>
 	<br/>
 </form>
 

@@ -24,25 +24,28 @@
   <h1>Update vaccine_status</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	Vaccine Name    :<input type="text" name="vaccinename" value="${vaccine_status.vaccinename }" disabled/>
+	Employee Id     :<input type="text" name="employee_id" value="${vaccine_status.employee_id }" disabled/>
+	<br/>
+	Vaccine Name ：<input type="text" name="vaccine_name" value="${vaccine_status.vaccine_name }" disabled/>
+	<br/>
+	Vaccine Date ：<input type="text" name="vaccine_date" value="${vaccine_status.vaccine_date }" disabled/>
+	<br/>
+	Dose Number ：<input type="text" name="dose_number" value="${vaccine_status.dose_number }" disabled/>
 	<br/>
 	
-	Date：<input type="text" name="date" value="${vaccine_status.date }" disabled />
-	<br/>
-	Employee Id	：<input type="text" name="userid" value="${vaccine_status.userid }" disabled/>
-	<br/>
-	Student Id	：<input type="text" name="userid" value="${vaccine_status.userid }" disabled/>
-	<br/>
 </form>
 <h1>Update the values below</h1>
-<form action="<c:url value='/vaccine_statusServletUpdate'/>" method="post">
+<form action="<c:url value='/Vaccine_statusServletUpdate'/>" method="post">
 		<input type="hidden" name="method" value="update"/>
-				<input type="hidden" name="userid" value="${vaccine_status.userid }"/>
-	Vaccine Name：<input type="password" name="password" value="${form.vaccinename }"/>
+				<input type="hidden" name="employee_id" value="${vaccine_status.employee_id }"/>
+				
+	Vaccine Name ：<input type="text" name="vaccine_name" value="${form.vaccine_name }" />
+	<br/>
 	<span style="color: red; font-weight: 900">${errors.vaccinename }</span>
 	<br/>
-	Date	：<input type="text" name="email" value="${form.date }"/>
-	<span style="color: red; font-weight: 900">${errors.date }</span>
+	Vaccine Date ：<input type="text" name="vaccine_date" value="${form.vaccine_date }" />
+	<br/>
+	Dose Number ：<input type="text" name="dose_number" value="${form.dose_number }" />
 	<br/>
 	<input type="submit" value="Update vaccine_status"/>
 </form>

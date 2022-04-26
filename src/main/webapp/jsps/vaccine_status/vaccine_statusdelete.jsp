@@ -22,13 +22,10 @@
   
   <body>
   <h1>Delete vaccine_status</h1>
-<form action="<c:url value='/vaccine_statusServletDelete'/>" method="post">
+<form action="<c:url value='/Vaccine_statusServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
-	Delete Vaccine Name   :<input type="text" name="vaccinename" value="${form.vaccinename }"/>
-	<span style="color: red; font-weight: 900">${errors.vaccinename }</span>
-	<br/>
-	Delete Vaccine Date   :<input type="text" name="date" value="${form.date }"/>
-	<span style="color: red; font-weight: 900">${errors.date }</span>
+	Delete Employee Id :<input type="text" name="employee_id" value="${form.employee_id }"/>
+	<span style="color: red; font-weight: 900">${errors.employee_id }</span>
 	<br/>
 	<input type="submit" value="Delete vaccine_status"/>
 </form>

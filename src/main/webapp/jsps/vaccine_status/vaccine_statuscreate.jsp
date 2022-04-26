@@ -22,19 +22,20 @@
   
   <body>
   <h1>vaccine_status Create</h1>
-<form action="<c:url value='/vaccine_statusServletCreate'/>" method="post">
-	Vaccine Name    :<input type="text" name="vaccinename" value="${form.vaccinename }"/>
-	<span style="color: red; font-weight: 900">${errors.vaccinename }</span>
+<form action="<c:url value='/Vaccine_statusServletCreate'/>" method="post">
+	Employee Id     :<input type="text" name="employee_id" value="${form.employee_id }" />
+	<span style="color: red; font-weight: 900">${errors.employee_id }</span>
 	<br/>
-	Date：<input type="text" name="date" value="${form.date }"/>
-	<span style="color: red; font-weight: 900">${errors.date }</span>
+	Vaccine Name ：<input type="text" name="vaccine_name" value="${form.vaccine_name }" />
+	<span style="color: red; font-weight: 900">${errors.vaccine_name }</span>
 	<br/>
-	Employee Id	：<input type="text" name="userid" value="${form.userid }"/>
-	<span style="color: red; font-weight: 900">${errors.userid }</span>
+	Vaccine Date ：<input type="text" name="vaccine_date" value="${form.vaccine_date }" />
+	<span style="color: red; font-weight: 900">${errors.vaccine_date }</span>
 	<br/>
-	Student Id	：<input type="text" name="userid" value="${form.userid }"/>
-	<span style="color: red; font-weight: 900">${errors.userid }</span>
+	Dose Number ：<input type="text" name="dose_number" value="${form.dose_number }" />
+	<span style="color: red; font-weight: 900">${errors.dose_number }</span>
 	<br/>
+	
 	<input type="submit" value="Create vaccine_status"/>
 </form>
   </body>

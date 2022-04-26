@@ -41,30 +41,31 @@ public class Department_employeeServletCreate extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//		Department_employeeService entity1service = new Department_employeeService();
-//		Map<String,String[]> paramMap = request.getParameterMap();
-//		Department_employee form = new Department_employee();
-//		List<String> info = new ArrayList<String>();
-//
-//		for(String name : paramMap.keySet()) {
-//			String[] values = paramMap.get(name);
-//			info.add(values[0]);
-//		}
-////		form.setUsername(info.get(0));
-////		form.setPassword(info.get(1));
-////		form.setEmail(info.get(2));		
-//		
-//		try {
-//			entity1service.create(form);
-//			response.sendRedirect( request.getContextPath() + "/jsps/main.jsp");
-//			
-//		} catch (ClassNotFoundException | Department_employeeException e) {
-//			e.printStackTrace();
-//		} catch (InstantiationException e) {
-//			e.printStackTrace();
-//		} catch (IllegalAccessException e) {
-//			e.printStackTrace();
-//		} 
+		Department_employeeService entity1service = new Department_employeeService();
+		Map<String,String[]> paramMap = request.getParameterMap();
+		Department_employee form = new Department_employee();
+		List<String> info = new ArrayList<String>();
+
+		for(String name : paramMap.keySet()) {
+			String[] values = paramMap.get(name);
+			info.add(values[0]);
+		}
+		
+		form.setDepartment_department_id(Integer.parseInt( info.get(0)));
+		form.setEmployee_employee_id(Integer.parseInt(info.get(1)));
+		form.setDepartment_employee_id(Integer.parseInt(info.get(2)));
+		
+		try {
+			entity1service.create(form);
+			response.sendRedirect( request.getContextPath() + "/jsps/main.jsp");
+			
+		} catch (ClassNotFoundException | Department_employeeException e) {
+			e.printStackTrace();
+		} catch (InstantiationException e) {
+			e.printStackTrace();
+		} catch (IllegalAccessException e) {
+			e.printStackTrace();
+		} 
 		
 	}
 

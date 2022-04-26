@@ -237,6 +237,17 @@
   </servlet-mapping>
   
   
+   <servlet>
+    <description></description>
+    <display-name>Department_employeeServletCreate</display-name>
+    <servlet-name>Department_employeeServletCreate</servlet-name>
+    <servlet-class>department_employee.web.servlet.Department_employeeServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Department_employeeServletCreate</servlet-name>
+    <url-pattern>/Department_employeeServletCreate</url-pattern>
+  </servlet-mapping>
+  
   <servlet>
     <description></description>
     <display-name>findAll</display-name>

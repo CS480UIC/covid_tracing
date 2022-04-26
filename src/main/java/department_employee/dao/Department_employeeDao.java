@@ -29,23 +29,23 @@ public class Department_employeeDao {
 	 */
 	private String MySQL_password = "annandliz"; //TODO change password
 
-	public Department_employee findByDepartment_department_id(Integer department_department_id_p) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+	public Department_employee findByDepartment_employee_id(Integer department_employee_id_p) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		Department_employee department_employee = new Department_employee();
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/bookstore", MySQL_user, MySQL_password);
-		    String sql = "select * from department_employee where department_department_id = ?";
+		    String sql = "select * from department_employee where department_employee_id = ?";
 		    PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setInt(1,department_department_id_p);
+		    preparestatement.setInt(1,department_employee_id_p);
 		    ResultSet resultSet = preparestatement.executeQuery();
 
 		    while(resultSet.next()){
-		    	Integer department_department_id = Integer.parseInt(resultSet.getString("department_department_id"));
-		    	if(department_department_id == (department_department_id_p)){
+		    	Integer department_employee_id = Integer.parseInt(resultSet.getString("department_employee_id_p"));
+		    	if(department_employee_id == (department_employee_id_p)){
 		    		
-		    		department_employee.setDepartment_department_id(department_department_id);
+		    		department_employee.setDepartment_department_id(Integer.parseInt(resultSet.getString("department_department_id")));
 		    		department_employee.setEmployee_employee_id(Integer.parseInt(resultSet.getString("employee_employee_id")));
-		    		department_employee.setDepartment_employee_id(Integer.parseInt(resultSet.getString("department_employee_id")));
+		    		department_employee.setDepartment_employee_id(department_employee_id);
 		    	}
 		    }
 		    connect.close();

@@ -36,9 +36,9 @@
 		<input type="hidden" name="method" value="update"/>
 				<input type="hidden" name="department_employee_id" value="${department_employee.department_employee_id }"/>
 				
-	Department department id ：<input type="text" name="department_department_id" value="${department_employee.department_department_id }" disabled/>
+	Department department id ：<input type="text" name="department_department_id" value="${department_employee.department_department_id }" />
 	<br/>
-	Employee employee Id ：<input type="text" name="employee_employee_id" value="${department_employee.employee_employee_id }" disabled/>
+	Employee employee Id ：<input type="text" name="employee_employee_id" value="${department_employee.employee_employee_id }" />
 	<br/>
 	
 	<input type="submit" value="Update department_employee"/>

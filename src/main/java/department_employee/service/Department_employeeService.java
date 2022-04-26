@@ -21,8 +21,8 @@ public class Department_employeeService {
 	 */
 	public void create(Department_employee form) throws Department_employeeException, ClassNotFoundException, InstantiationException, IllegalAccessException{
 		// check the primary key of Entity1
-		Department_employee entity1 = department_employeeDao.findByDepartment_department_id(form.getDepartment_department_id());
-		if(entity1.getDepartment_department_id()!=null && entity1.getDepartment_department_id() == form.getDepartment_department_id()) throw new Department_employeeException("This Department Department ID has been registered!");
+		Department_employee entity1 = department_employeeDao.findByDepartment_employee_id(form.getDepartment_employee_id());
+		if(entity1.getDepartment_employee_id()!=null && entity1.getDepartment_employee_id() == form.getDepartment_employee_id()) throw new Department_employeeException("This Department Employee ID has been registered!");
 		department_employeeDao.add(form);
 	}
 

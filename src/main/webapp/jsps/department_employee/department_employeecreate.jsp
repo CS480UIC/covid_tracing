@@ -23,13 +23,13 @@
   <body>
   <h1>department_employee Create</h1>
 <form action="<c:url value='/Department_employeeServletCreate'/>" method="post">
-	Department department id ：<input type="text" name="department_department_id" value="${department_employee.department_department_id }" disabled/>
+	Department department id ：<input type="text" name="department_department_id" value="${department_employee.department_department_id }" />
 	<span style="color: red; font-weight: 900">${errors.department_department_id }</span>
 	<br/>
-	Employee employee Id ：<input type="text" name="employee_employee_id" value="${department_employee.employee_employee_id }" disabled/>
+	Employee employee Id ：<input type="text" name="employee_employee_id" value="${department_employee.employee_employee_id }" />
 	<span style="color: red; font-weight: 900">${errors.employee_employee_id }</span>
 	<br/>
-	Department employee Id ：<input type="text" name="department_employee_id" value="${department_employee.department_employee_id }" disabled/>
+	Department employee Id ：<input type="text" name="department_employee_id" value="${department_employee.department_employee_id }" />
 	<span style="color: red; font-weight: 900">${errors.department_employee_id }</span>
 	<br/>
 	<input type="submit" value="Create department_employee"/>

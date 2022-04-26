@@ -12,12 +12,12 @@ import java.sql.SQLException;
 //import java.util.ArrayList;
 //import java.util.List;
 
-import entity1.domain.Entity1;
+import entity1.domain.Vaccine_status;
 
 /**
  * DDL functions performed in database
  */
-public class Entity1Dao {
+public class Vaccine_statusDao {
 	
 	/**
 	 * user name to connect to the database
@@ -29,8 +29,8 @@ public class Entity1Dao {
 	 */
 	private String MySQL_password = "annandliz"; //TODO change password
 
-	public Entity1 findByUsername(String username) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
-		Entity1 entity1 = new Entity1();
+	public Vaccine_status findByUsername(String username) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+		Vaccine_status entity1 = new Vaccine_status();
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/bookstore", MySQL_user, MySQL_password);
@@ -62,7 +62,7 @@ public class Entity1Dao {
 	 * @throws InstantiationException 
 	 */
 	
-	public void add(Entity1 form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+	public void add(Vaccine_status form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/bookstore", MySQL_user, MySQL_password);
@@ -86,7 +86,7 @@ public class Entity1Dao {
 	 * @throws InstantiationException
 	 * @throws IllegalAccessException
 	 */
-	public void update(Entity1 form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+	public void update(Vaccine_status form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/bookstore", MySQL_user, MySQL_password);

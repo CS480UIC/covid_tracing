@@ -269,6 +269,16 @@
     <url-pattern>/Vaccine_statusServletUpdate</url-pattern>
   </servlet-mapping>
   
+    <servlet>
+    <description></description>
+    <display-name>Vaccine_statusServletDelete</display-name>
+    <servlet-name>Vaccine_statusServletDelete</servlet-name>
+    <servlet-class>vaccine_status.web.servlet.Vaccine_statusServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Vaccine_statusServletDelete</servlet-name>
+    <url-pattern>/Vaccine_statusServletDelete</url-pattern>
+  </servlet-mapping>
   
    <servlet>
     <description></description>

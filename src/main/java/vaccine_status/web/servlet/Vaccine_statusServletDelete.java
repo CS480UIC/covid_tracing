@@ -35,45 +35,45 @@ public class Vaccine_statusServletDelete extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//		String method = request.getParameter("method");
-//		Vaccine_statusDao entity1Dao = new Vaccine_statusDao();
-//		Vaccine_status entity1 = null;
-//		if(method.equals("search"))
-//		{
-//			try {
-//				entity1 = entity1Dao.findByEmployee_id(request.getParameter("username"));
-//			} catch (ClassNotFoundException e1) {
-//				e1.printStackTrace();
-//			} catch (InstantiationException e1) {
-//				e1.printStackTrace();
-//			} catch (IllegalAccessException e1) {
-//				e1.printStackTrace();
-//			}
-//		
-//			if(entity1.getUsername()!=null){
-//						System.out.println(entity1);
-//						request.setAttribute("entity1", entity1);
-//						request.getRequestDispatcher("/jsps/entity1/entity1_delete_output.jsp").forward(request, response);			
-//				}
-//				else{
-//				request.setAttribute("msg", "Entity not found");
-//				request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
-//			}
-//		}
-//		else if(method.equals("delete"))
-//		{	
-//			try {
-//				entity1Dao.delete(request.getParameter("username"));
-//			} catch (ClassNotFoundException e1) {
-//				e1.printStackTrace();
-//			} catch (InstantiationException e1) {
-//				e1.printStackTrace();
-//			} catch (IllegalAccessException e1) {
-//				e1.printStackTrace();
-//			}
-//			request.setAttribute("msg", "Entity Deleted");
-//			request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
-//		}
+		String method = request.getParameter("method");
+		Vaccine_statusDao vaccine_statusDao = new Vaccine_statusDao();
+		Vaccine_status vaccine_status = null;
+		if(method.equals("search"))
+		{
+			try {
+				vaccine_status = vaccine_statusDao.findByEmployee_id(Integer.parseInt( request.getParameter("employee_id")));
+			} catch (ClassNotFoundException e1) {
+				e1.printStackTrace();
+			} catch (InstantiationException e1) {
+				e1.printStackTrace();
+			} catch (IllegalAccessException e1) {
+				e1.printStackTrace();
+			}
+		
+			if(vaccine_status.getVaccine_name()!=null){
+						//System.out.println(vaccine_status);
+						request.setAttribute("vaccine_status", vaccine_status);
+						request.getRequestDispatcher("/jsps/vaccine_status/vaccine_status_delete_output.jsp").forward(request, response);			
+				}
+				else{
+				request.setAttribute("msg", "vaccine_status not found");
+				request.getRequestDispatcher("/jsps/vaccine_status/vaccine_status_read_output.jsp").forward(request, response);
+			}
+		}
+		else if(method.equals("delete"))
+		{	
+			try {
+				vaccine_statusDao.delete(request.getParameter("employee_id"));
+			} catch (ClassNotFoundException e1) {
+				e1.printStackTrace();
+			} catch (InstantiationException e1) {
+				e1.printStackTrace();
+			} catch (IllegalAccessException e1) {
+				e1.printStackTrace();
+			}
+			request.setAttribute("msg", "vaccine_status Deleted");
+			request.getRequestDispatcher("/jsps/vaccine_status/vaccine_status_read_output.jsp").forward(request, response);
+		}
 	}
 }
 
